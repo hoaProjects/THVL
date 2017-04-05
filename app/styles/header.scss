@@ -1,0 +1,188 @@
+header {
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 45px;
+    z-index: 100;
+}
+
+.slickSlider {
+    position: relative;
+}
+
+.slickSlider, .sliderBlock {
+    .slick-arrow{
+        background: url("/app/assets/img/arrow.png") transparent  left center no-repeat;
+        width: 18px;
+        height: 30px;
+        position: absolute;
+        z-index: 100;
+        top: 50%;
+        margin-top: -15px;
+        cursor: pointer;
+    }
+    .slick-next{
+        background-position: right center;
+    }
+}
+
+.slick-dots{
+    position: absolute;
+    right: 50px;
+    bottom: 15px;
+}
+
+.slick-dots li {
+    display: inline-block;
+    background: #b3b3b3;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    margin-left: 12px;
+}
+.slick-dots li.slick-active{
+    height: 12px;
+    width: 12px;
+    background: #fff;
+    position: relative;
+    top: 0;
+}
+.slick-dots li button{
+    background: transparent;
+    border: none;
+    text-indent: -9999px;
+    outline: none;
+    cursor: pointer;
+}
+
+header {
+    .wrap{
+        position: absolute;
+        min-height: 60px;
+        width: 100%;
+        z-index: 2;
+        &:after{
+            content: "";
+            position: absolute;
+            background: #0d0d0d;
+            opacity: 0.8;
+            width: 100%;
+            height: 60px;
+        }
+    }
+    nav{
+        position: absolute;
+        top: 20px;
+        z-index: 100;
+        right: 50px;
+        li{
+            float: left;
+            margin-left: 34px;
+            position: relative;
+            a{
+                display: inline-block;
+                border-radius: 50%;
+                color: #fff;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 700;
+                font-size: 18px;
+            }
+            ul.submenu{
+                position: absolute;
+                top: 55px;
+                right: 0;
+                width: 130px;
+                display: none;
+                li{
+                    position: relative;
+                    z-index: 1;
+                    margin-left: 1px;
+                    width: 100%;
+                    a{
+                        font-size: 14px;
+                        font-family: 'Roboto', sans-serif;
+                        font-weight: 400;
+                        color: #ccc;
+                        padding: 12px 0;
+                        display: block;
+                        padding-left: 20px;
+                        &:hover{
+                            background: #376bfb;
+                            border-radius: 0;
+                        }
+                    }
+                    &.signout{
+                        border-top: 1px solid #333537;
+                    }
+                }
+                &:after, &:before{
+                    content:"";
+                    position: absolute;
+                }
+                &:before{
+                    width: 0;
+                      height: 0;
+                      border-left: 5px solid transparent;
+                      border-right: 5px solid transparent;
+                      border-bottom: 5px solid #000;
+                      top: -4px;
+                        left: 50%;
+                        margin-left: -7px;
+                }
+                &:after{
+                    background: #000;
+                    opacity: 0.7;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                }
+            }
+            &:hover{
+                ul.submenu{
+                    display: block;
+                }
+            }
+            &.username{
+                padding-bottom: 40px;
+            }
+        }
+
+    }
+    a.btn-search{
+        background: url("/app/assets/img/search-icon.png") transparent  center no-repeat;
+        width: 25px;
+        height: 25px;
+    }
+    a.btn-notification{
+        background: url("/app/assets/img/bell-icon.png") transparent  center no-repeat;
+        width: 25px;
+        height: 25px;
+        position: relative;
+        span{
+            background: #f72533;
+            border-radius: 40px;
+            padding: 5px 7px;
+            color: #fff;
+            font-size: 12px;
+            position: absolute;
+            right: -10px;
+            top: -4px;
+        }
+    }
+}
+
+a.btn-avatar{
+    background: #ccc;
+    height: 38px;
+    width: 38px;
+    text-align: center;
+    position: relative;
+    top: -7px;
+}
+a.btn-avatar img{
+    margin-top: 6px;
+}
