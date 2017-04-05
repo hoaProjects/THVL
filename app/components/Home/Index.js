@@ -1,7 +1,9 @@
 import React from 'react';
 import CategoryList from '../../components/Category/CategoryList';
+import '../../styles/home.scss';
 
 const Home = () =>
+
     <section className="home">
         <div className="head">
             <h3 className="title">ĐANG XEM</h3>
@@ -14,4 +16,5 @@ const Home = () =>
         </div>
         <CategoryList categoryType = {'recommend'}/>
     </section>;
+
 export default Home;

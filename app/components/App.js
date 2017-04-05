@@ -5,12 +5,12 @@ import Footer from '../components/Common/Footer';
 import '../styles/style.scss';
 
 const App = ({ children }) =>
-    <div className="container">
+    <main className="container">
         <Header />
         <Navigation />
         { children }
         <Footer />
-    </div>;
+    </main>;
 
 App.propTypes = {
     children: PropTypes.object
