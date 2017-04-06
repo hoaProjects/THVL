@@ -3,6 +3,7 @@ import { Route, IndexRoute } from 'react-router';
 import App from './components/App';
 import HomePage from './components/Home/index';
 import TVShow from './components/TVShow/view';
+import VideoDetail from './components/VideoDetail/view';
 import ViewAllCategory from './components/ViewAllCategory/View';
 import ViewListCategory from './components/ViewAllCategory/List';
 
@@ -12,5 +13,6 @@ export default (
 		<Route path="/viewall" component={ViewAllCategory} />
 		<Route path="/listcategory" component={ViewListCategory} />
 		<Route path="/TV-Show" component={TVShow} />
+		<Route path="/Video" component={VideoDetail} />
 	</Route>
 );

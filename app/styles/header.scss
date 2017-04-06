@@ -4,25 +4,34 @@ header {
     top: 0;
 }
 .main-nav{
-    margin-top: 29px;
+    margin-top: 86px;
     border-bottom: 2px solid #333;
     padding-bottom: 25px;
     text-align: center;
     &.fixed {
         margin-top: 86px;
     }
+    a {
+        font-family: 'Roboto', sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #ccc;
+        margin: 0 1%;
+        &:hover {
+            color: #376bfb;
+        }
+    }
+    &.video {
+        margin-top: 40px;
+        a {
+            &:hover {
+                border-bottom: 3px #376bfb solid;
+            }
+        }
+    }
 }
-.main-nav a{
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #ccc;
-    margin: 0 1%;
-}
-.main-nav a:hover{
-    color: #376bfb;
-}
+
 .logo {
     position: absolute;
     top: 10px;

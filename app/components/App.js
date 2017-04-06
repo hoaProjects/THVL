@@ -9,9 +9,9 @@ class App extends React.Component {
 
     render() {
         let pathname=this.props.location.pathname
-        let pageclass='container ';
+        let pageclass='container home';
         if(pathname!='/')
-            pageclass=pageclass+pathname.replace("/", "")
+            pageclass='container '+pathname.replace("/", "")
         return (
             <main className={pageclass}>
                 <Header />
