@@ -148,7 +148,7 @@
 /*====================Video Detail=======================*/
 .VideoDetail {
     clear: both;
-    padding: 40px 0;
+    padding: 40px 44px;
     .VideoPlay {
         clear: both;
         .Video {
@@ -165,36 +165,94 @@
 /*======================================================*/
 .commentBlock {
     clear: both;
+    color: #ccc;
+    padding-top: 40px;
     .box-input {
         background-color: #4d4d4d;
         border-radius: 5px;
-        textarea {
+        overflow: hidden;
 
+        textarea {
+            float: left;
+            padding: 10px;
+            font-size: 16px;
+            font-family: 'Roboto';
+            line-height: 1.4;
+            width: 82%;
+            background-color: #4d4d4d;
+            outline: none;
+            border: none;
+            color: #ccc;
+            resize: none;
         }
         .control {
+            float: right;
+            padding: 14px 20px;
             p.text {
                 clear: both;
+                font-size: 16px;
+                padding-bottom: 11px;
             }
-            .btn {
-                 background-color: #376bfb;
-                 border-radius: 5px;
+            .btn{
+                width: 110px;
+                height: 42px;
+                border-radius: 5px;
+                display: block;
+                background-color: #376bfb;
+                font-size: 17px;
+                font-weight: 700;
+                color: #fff;
+                span {
+                    background: url("/app/assets/img/icon/arrow-send.png")  right center no-repeat;
+                    background-size: 38%;
+                    display: block;
+                    width: 60px;
+                    line-height: 42px;
+                    margin: 0 auto;
+                    display: block;
+                }
+                &:hover {
+                    background-color: #0647fa;
+                }
+
             }
         }
     }
     .comment {
         clear: both;
-        .item {
+        .itemUser {
             clear: both;
+            position: relative;
+            border-bottom: 1px #333333 solid;
+            overflow: hidden;
+            display: block;
+            padding: 10px 0;
             .imgBox {
                 float: left;
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                margin-right: 10px;
+                overflow: hidden;
             }
             .time {
                 position: absolute;
                 right: 0;
-                top: 0;
+                top: 15px;
+                font-size: 13px;
             }
             .content {
                 float: left;
+                padding-top: 16px;
+                .name {
+                    clear: both;
+                    font-weight: 700;
+                    padding: 0px 10px;
+                }
+                .text {
+                    font-size: 13px;
+                    padding: 10px;
+                }
             }
         }
     }

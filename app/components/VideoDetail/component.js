@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
+import PhotoData from '../../components/json/comment';
 import '../../styles/style.scss';
+const Photo=PhotoData.data;
 
 export class VideoPlay extends React.Component {
     constructor() {
@@ -30,29 +32,43 @@ export class VideoTab extends React.Component {
         );
     }
 }
-export class Comment extends React.Component {
+
+export class ItemComment extends React.Component {
+
+    render() {
+
+        return (
+            <article className="itemUser">
+                <div className="imgBox"><img src={this.props.photo} /></div>
+                <div className="time">{this.props.time}</div>
+                <div className="content">
+                    <p className="name">{this.props.Name}</p>
+                    <p className="text">{this.props.text}</p>
+                </div>
+            </article>
+        );
+    }
+}
+
+export class Comments extends React.Component {
     constructor() {
         super();
+        this.state={
+            data: Photo
+        }
     }
     render() {
         return (
             <section className="commentBlock">
                 <div className="box-input">
-                    <textarea rows="4" cols="50">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.</textarea>
-                    <div className="box-input">
+                    <textarea rows="4" cols="50" placeholder="Nhập nội dung bình luận..."></textarea>
+                    <div className="control">
                         <p className="text">Tối thiểu 20 ký tự</p>
-                        <a href="#">GỬI</a>
+                        <a href="#" className="btn"><span>GỬI</span></a>
                     </div>
                 </div>
                 <div className="comment">
-                    <article className="item">
-                        <div className="imgBox">img</div>
-                        <div className="time">9:19 sáng Thứ Năm</div>
-                        <div className="content">
-                            <p className="name">Mai Nguyễn</p>
-                            <p className="text">Mình đang muộn hóng những tập sau của one piece nên làm ơn ra nhanh hơn nhé mình rất thích chất lượng và luôn thích xen trên đây.</p>
-                        </div>
-                    </article>
+                    {this.state.data.map((item, i) => (<ItemComment key={i} photo={item.photo} Name= {item.Name} text={item.text} time={item.time}  />))}
                 </div>
             </section>
         );
