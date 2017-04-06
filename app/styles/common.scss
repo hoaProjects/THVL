@@ -1,0 +1,147 @@
+.head{
+    padding-top: 50px;
+    h3.title{
+        font-family: "Roboto", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        color: #fff;
+        padding-left: 45px;
+        float: left;
+    }
+    a.viewall{
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        color: #fff;
+        padding-right: 23px;
+        margin-right: 45px;
+        background: url("/app/assets/img/icon/arrow_small.png") transparent  right center no-repeat;
+        float:right;
+    }
+}
+/*===========================================*/
+.item {
+    border-radius: 5px;
+    margin: 3px;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-transition: all 200ms ease-out;
+    -webkit-transform: scale(1);
+    -ms-transition: all 200ms ease-out;
+    -ms-transform: scale(1);
+    -moz-transition: all 200ms ease-out;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-out;
+    transform: scale(1);
+    .iconPlay {
+        background: url("/app/assets/img/icon/play_icon.png") transparent  right center no-repeat;
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-top: -40px;
+        margin-left: -40px;
+        opacity: 0;
+        -webkit-transition: all 200ms ease-out;
+        -ms-transition: all 200ms ease-out;
+        -moz-transition: all 200ms ease-out;
+        transition: all 200ms ease-out;
+    }
+    a{
+        color: #fff;
+        img {
+            display: block;
+        }
+    }
+    &:hover{
+        box-shadow: 0px 0px 150px #000000;
+        -webkit-transition: all 200ms ease-out;
+        -webkit-transform: scale(1.2);
+        -ms-transition: all 200ms ease-out;
+        -ms-transform: scale(1.2);
+        -moz-transition: all 200ms ease-out;
+        -moz-transform: scale(1.2);
+        transition: all 200ms ease-out;
+        transform: scale(1.2);
+        position: relative;
+        z-index: 99;
+        .iconPlay {
+            opacity: 1;
+        }
+    }
+}
+/*===========================================*/
+.description {
+    background: #000;
+    min-height: 74px;
+    padding: 0px 15px;
+    h6 {
+        font-size: 18px;
+        padding: 14px 0;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+    }
+    .play {
+        font-size: 14px;
+        float: left;
+        background: url("/app/assets/img/icon/i-play.png") transparent  left center no-repeat;
+        padding-left: 24px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+    }
+    .heart {
+        font-size: 14px;
+        float: left;
+        background: url("/app/assets/img/icon/heart.png") transparent  left center no-repeat;
+        padding-left: 28px;
+        height: 16px;
+        line-height: 16px;
+        margin-left: 30px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+    }
+}
+/*===========================================*/
+.list-video {
+    clear: both;
+    padding: 30px 44px;
+}
+/*TV show*/
+.TVShow {
+
+}
+/*===========================================*/
+.Paging {
+    clear: both;
+    text-align: center;
+    padding: 30px;
+    a {
+        display: inline-block;
+        color: #fff;
+        margin: 0 5px;
+        margin: 0 14px;
+        font-size: 18px;
+        cursor: pointer;
+        -webkit-transition: all 200ms ease-out;
+        -webkit-transform: scale(1);
+        -ms-transition: all 200ms ease-out;
+        -ms-transform: scale(1);
+        -moz-transition: all 200ms ease-out;
+        -moz-transform: scale(1);
+        transition: all 200ms ease-out;
+        transform: scale(1);
+        &:hover {
+            color: #304fa6;
+            -webkit-transition: all 200ms ease-out;
+            -webkit-transform: scale(2);
+            -ms-transition: all 200ms ease-out;
+            -ms-transform: scale(2);
+            -moz-transition: all 200ms ease-out;
+            -moz-transform: scale(2);
+            transition: all 200ms ease-out;
+            transform: scale(2);
+            position: relative;
+            z-index: 99;
+        }
+    }
+}
