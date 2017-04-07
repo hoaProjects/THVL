@@ -370,7 +370,16 @@ h3 {
     font-size: 24px;
     font-weight: 700;
 }
-
+.m-fadeOut {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 300ms;
+}
+.m-fadeIn {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 300ms;
+}
 /*====================Poppup Detail Account=======================*/
 .Popup-Account {
     position: fixed;
@@ -378,7 +387,13 @@ h3 {
     top: 0;
     width: 100%;
     height: 100%;
-
+    -webkit-transition: .3s all ease;
+    -moz-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    transition: .3s all ease;
+    visibility: hidden;
+    opacity: 0;
     .bg_overlay {
 
         height: 100%;
