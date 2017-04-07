@@ -1,7 +1,7 @@
 import React from 'react';
 import VideoPlay,{VideoTab} from './component';
 
-export default class TVShow extends React.Component {
+export default class VideoDetail extends React.Component {
 
     constructor() {
         super();
