@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=vietnamese');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import 'reset.scss';
 @import 'slick.scss';
 @import 'header.scss';
 @import 'common.scss';
 @import 'footer.scss';
+@import 'login.scss';
+@import 'account.scss';
 body, html{
   padding: 0; margin: 0;
   font-size: 14px;
