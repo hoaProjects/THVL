@@ -1,5 +1,5 @@
 import React from 'react';
-import VideoPlay,{VideoTab,Comments} from './component';
+import VideoPlay,{VideoTab} from './component';
 
 export default class TVShow extends React.Component {
 
@@ -15,7 +15,7 @@ export default class TVShow extends React.Component {
             <section className="VideoDetail">
                 <VideoPlay />
                 <VideoTab />
-                <Comments />
+                { this.props.children }
             </section>
         );
     }

@@ -256,5 +256,27 @@
             }
         }
     }
+}
+//====================================================
+.infoBlock {
+    clear: both;
+    .col {
+        float: left;
+        width: 50%;
+    }
+    h3.title {
+        clear: both;
+    }
+    p.text {
 
+    }
+    .list-info {
+        .text {
+            float: left;
+            width: 30%;
+        }
+        .content {
+            float: left;
+        }
+    }
 }

@@ -1,20 +1,7 @@
 import React from 'react';
-import CategoryList from '../../components/Category/CategoryList';
+import CategoryList from '../../components/Category/CategorySlider';
 import '../../styles/home.scss';
 
 const Home = () =>
-
-    <section className="home">
-        <div className="head">
-            <h3 className="title">ĐANG XEM</h3>
-            <a href="/viewall" className="viewall">Tất cả</a>
-        </div>
-        <CategoryList categoryType = {'viewing'}/>
-        <div className="head">
-            <h3 className="title">THVL ĐỀ XUẤT</h3>
-            <a href="/viewall" className="viewall">Tất cả</a>
-        </div>
-        <CategoryList categoryType = {'recommend'}/>
-    </section>;
-
+    <CategoryList />
 export default Home;

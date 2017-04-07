@@ -27,28 +27,12 @@ export class VideoTab extends React.Component {
                 <Link to="/truyen-hinh" activeClassName="active">Clip hay</Link>
                 <Link to="/tv-show" activeClassName="active">Trộn bộ</Link>
                 <Link to="/tv-show" activeClassName="active">Liên quan</Link>
-                <Link to="/tv-show" activeClassName="active">Bình Luận</Link>
+                <Link to="/Video/comment" activeClassName="active">Bình Luận</Link>
             </nav>
         );
     }
 }
 
-export class ItemComment extends React.Component {
-
-    render() {
-
-        return (
-            <article className="itemUser">
-                <div className="imgBox"><img src={this.props.photo} /></div>
-                <div className="time">{this.props.time}</div>
-                <div className="content">
-                    <p className="name">{this.props.Name}</p>
-                    <p className="text">{this.props.text}</p>
-                </div>
-            </article>
-        );
-    }
-}
 
 export class Comments extends React.Component {
     constructor() {
@@ -74,4 +58,17 @@ export class Comments extends React.Component {
         );
     }
 }
+
+export class Info extends React.Component {
+
+    render() {
+
+        return (
+            <article className="infoBlock">
+
+            </article>
+        );
+    }
+}
+
 export default VideoPlay;

@@ -1,7 +1,7 @@
 import React from 'react';
-import CategoryList from '../../components/Category/CategoryList';
+import CategoryList from './../common/SliderList';
 
-const ViewAllCategory = () =>
+const CategorySlider = () =>
     <section className="home">
         <div className="head">
             <h3 className="title">ĐANG XEM</h3>
@@ -24,4 +24,4 @@ const ViewAllCategory = () =>
         </div>
         <CategoryList categoryType = {'recommend'}/>
     </section>;
-export default ViewAllCategory;
+export default CategorySlider;
