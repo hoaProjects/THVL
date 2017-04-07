@@ -32,43 +32,4 @@ export class VideoTab extends React.Component {
         );
     }
 }
-
-
-export class Comments extends React.Component {
-    constructor() {
-        super();
-        this.state={
-            data: Photo
-        }
-    }
-    render() {
-        return (
-            <section className="commentBlock">
-                <div className="box-input">
-                    <textarea rows="4" cols="50" placeholder="Nhập nội dung bình luận..."></textarea>
-                    <div className="control">
-                        <p className="text">Tối thiểu 20 ký tự</p>
-                        <a href="#" className="btn"><span>GỬI</span></a>
-                    </div>
-                </div>
-                <div className="comment">
-                    {this.state.data.map((item, i) => (<ItemComment key={i} photo={item.photo} Name= {item.Name} text={item.text} time={item.time}  />))}
-                </div>
-            </section>
-        );
-    }
-}
-
-export class Info extends React.Component {
-
-    render() {
-
-        return (
-            <article className="infoBlock">
-
-            </article>
-        );
-    }
-}
-
 export default VideoPlay;
