@@ -150,15 +150,72 @@
     clear: both;
     padding: 40px 44px;
     .VideoPlay {
+        position: relative;
         clear: both;
         .Video {
             margin: 0 auto;
+                width: 90%;
             img {
                 width: 100%;
                 max-width: 100%;
                 margin: 0 auto;
                 display: block;
             }
+        }
+        .controlVideo {
+            position: absolute;
+
+            float: left;
+            margin-top: -95px;
+            width: 100%;
+            height: 68px;
+            bottom: 34px;
+            .Node
+            {
+                img {
+                    margin-left: 0px;
+                    padding-left: 0px;
+                }
+            }
+            .background-control-video
+            {
+                width: 82%;
+                background-color: rgb(38, 38, 38);
+                margin: 0 auto;
+                overflow: hidden;
+                padding: 15px;
+                border-radius: 6px;
+            }
+            width: 100%;
+            float: left;
+            img {
+                float: left;
+                    padding-left: 15px;
+            }
+            .progress-active {
+                background-color: rgb(55, 107, 251);
+                width: 30%;
+                height: 6px;
+                margin-left: 15px;
+                margin-top: 10px;
+                float: left;
+            }
+            .progress-nonactive {
+                width: 30%;
+                height: 6px;
+                background-color: #fff;
+                margin-top: 10px;
+                float: left;
+                margin-left: -2px;
+            }
+            .cls-minute {
+                font-size: 20px;
+                color: #fff;
+                margin-left: 1%;
+                float: left;
+                margin-top: 4px;
+            }
+
         }
     }
 }
@@ -260,23 +317,56 @@
 //====================================================
 .infoBlock {
     clear: both;
+    width: 100%;
+    padding: 18px 0;
+    color: #fff;
+    overflow: hidden;
     .col {
         float: left;
-        width: 50%;
+        width: 63%;
+        padding-right: 7%;
+        &.right {
+            padding-top: 49px;
+            width: 30%;
+            padding-right: 0;
+        }
     }
     h3.title {
         clear: both;
+        padding: 15px 0;
     }
     p.text {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    .infoVideo {
 
     }
-    .list-info {
-        .text {
+    .row {
+        clear: both;
+        span {
+
+            color: #cccccc;
+            font-size: 16px;
+            line-height: 1.5;
+            display: block;
             float: left;
-            width: 30%;
-        }
-        .content {
-            float: left;
+            &:first-child {
+                width: 140px;
+            }
+            &:last-child {
+                width: 240px;
+                font-weight: bold;
+                color: #fff;
+                &.typeFilm {
+                    color: #376bfb;
+                }
+            }
         }
     }
+}
+//====================================================
+h3 {
+    font-size: 24px;
+    font-weight: 700;
 }
