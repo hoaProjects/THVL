@@ -20,6 +20,7 @@ class App extends React.Component {
                 <Navigation />
                 { this.props.children }
                 <Footer />
+                
             </main>
         );
     }
