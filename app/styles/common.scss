@@ -370,3 +370,86 @@ h3 {
     font-size: 24px;
     font-weight: 700;
 }
+
+/*====================Poppup Detail Account=======================*/
+.Popup-Account {
+    .bg_overlay {
+
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        // background-color: rgba(0,0,0, 0.9);
+        background-color: rgba(0,0,0, 0.6);
+        overflow-x: auto;
+        overflow: hidden;
+        transition: .5s;
+        .contentPopup
+        {
+            .col{
+                vertical-align: middle;
+                padding-right: 35px;
+            }
+            position: relative;
+            top: 25%;
+            margin: auto;
+            border-radius: 6px;
+            background-color: rgb(38, 38, 38);
+            width: 40%;
+            padding-top: 5px;
+            .main-nav
+            {
+                font-size: 22px;
+                margin-top: 10px;
+                padding-bottom: 10px;
+                a {
+                        margin: 0 2%;
+                        font-size: 22px;
+                }
+            }
+            .contentBlock {
+                margin: auto;
+                padding: 20px 10px;
+                display: table;
+                .col{
+                    display: table-cell;
+                }
+                .itemUser {
+                    float: left;
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    overflow: hidden;
+                }
+                .row {
+
+                    clear: both;
+                    span {
+                        line-height: 2.5;
+                        color: #cccccc;
+                        font-size: 16px;
+                        display: block;
+                        float: left;
+                        &:first-child {
+                            width: 163px;
+                        }
+                        &:last-child {
+                            width: 240px;
+                            font-weight: bold;
+                            color: #fff;
+                            &.typeFilm {
+                                color: #376bfb;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+//====================================================
