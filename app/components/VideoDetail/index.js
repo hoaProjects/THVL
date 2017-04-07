@@ -1,13 +1,11 @@
 import React from 'react';
-import VideoPlay,{VideoTab} from './component';
+import VideoTab  from './component';
+import VideoPlay from '../../components/Common/player';
 
 export default class VideoDetail extends React.Component {
 
     constructor() {
         super();
-        this.state={
-            data: 'Video'
-        }
     }
     render() {
 

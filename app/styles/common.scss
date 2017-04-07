@@ -146,9 +146,9 @@
     }
 }
 /*====================Video Detail=======================*/
-.VideoDetail {
+.VideoDetail, .LiveHome {
     clear: both;
-    padding: 40px 44px;
+    padding: 40px 0;
     .VideoPlay {
         position: relative;
         clear: both;
@@ -223,7 +223,7 @@
 .commentBlock {
     clear: both;
     color: #ccc;
-    padding-top: 40px;
+    padding: 40px;
     .box-input {
         background-color: #4d4d4d;
         border-radius: 5px;

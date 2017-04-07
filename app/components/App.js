@@ -19,7 +19,6 @@ class App extends React.Component {
                 {pathname=='/' ? <SlickSlider /> : ''}
                 <Navigation />
                 { this.props.children }
-                <PopupAccount />
                 <Footer />
             </main>
         );
