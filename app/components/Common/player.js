@@ -1,4 +1,5 @@
 import React from 'react';
+import LiveSchedule from '../../components/Common/liveschedule';
 
 export class VideoPlay extends React.Component {
     constructor() {
@@ -23,6 +24,7 @@ export class VideoPlay extends React.Component {
                         <section className="Zoom"><img src="/app/assets/img/icon/zoom.png"/></section>
                     </div>
                 </div>
+                <LiveSchedule />
             </section>
         );
     }
