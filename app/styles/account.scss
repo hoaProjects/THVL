@@ -1,5 +1,9 @@
 /*====================Poppup Detail Account=======================*/
 .Popup-Account {
+
+    .abc{
+        color: #fff;
+    }
     position: fixed;
     left: 0;
     top: 0;
@@ -22,6 +26,7 @@
     }
     .contentPopup
     {
+
         position: absolute;
         top: 25%;
         margin: auto;
@@ -77,6 +82,9 @@
                 }
             }
         .inforAccountBlock {
+            height: 360px;
+            overflow-y: auto;
+            overflow-x: hidden;
             margin: auto;
             padding: 20px 10px;
             display: table;
@@ -95,6 +103,9 @@
             
         }
         .transAcountBlock {
+            height: 360px;
+            overflow-y: auto;
+            overflow-x: hidden;
             .clearfix
             {
                 border-bottom: 2px solid #333;
@@ -113,6 +124,104 @@
                     width: 300px;
                     font-weight: bold;
                     color: #fff;
+                    }
+                }
+            }
+        }
+        .informAcountBlock {
+            height: 360px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            .clearfix
+            {
+                border-bottom: 2px solid #333;
+                float: left;
+                width: 90%;
+                margin-bottom: 10px;
+            }
+            .col {
+                width: 100%;
+                margin-left: 25px;
+                margin-top: 15px;
+                
+                .row {
+                    span {
+                        width: 90%;
+                        color : #fff;
+                        font-weight: normal;
+                        &.dicription {
+                            line-height: 1.5;
+                        }
+                        &.time {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+        .Popup-Pay-Account {
+
+            height: 280px;
+            float: left;
+            width: 100%;
+            padding: 30px;
+            .pay-nav {
+                float: left;
+                border-bottom: none;
+                width: auto;
+                a {
+                    float: left;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    font-size: 18px;
+                    text-transform: inherit;
+                    color: #cccccc;
+                    &:hover {
+                        
+                        color: #fff;
+                        background-color: #404040;
+                        border-bottom: none;
+                    }
+                    &.active {
+                        color: #fff;
+                        background-color: #404040;
+                        border-bottom: none;
+                    }
+                }
+            }
+            .giftPayAcountBlock
+            {
+                background-color: #404040;
+                float: left;
+                width: 90%;
+                margin-top: -6px;
+                padding: 40px 0;
+                border-radius: 5px; 
+                .col {
+                    font-size: 18px;
+                    padding-left: 20px;
+                    span {
+                        padding-right: 5px;
+                        color: #fff
+                    }
+                    input {
+                        height: 45px;
+                        width: 40%;
+                        padding-right: 5px;
+                        background-color: #666666;
+                        border-radius: 5px;
+                        border:none;
+                    }
+                    button {
+                        font-weight: bold;
+                        margin-left: 10px;
+                        background-color: #376bfb;
+                        height: 45px;
+                        border: none;
+                        width: 100px;
+                        color: #fff;
+                        border-radius: 5px;
+
                     }
                 }
             }

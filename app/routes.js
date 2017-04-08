@@ -12,10 +12,14 @@ import ClipAll from './components/VideoDetail/tronbo';
 import RelClip from './components/VideoDetail/lienquan';
 import ViewAll from './components/Category/CategoryAll';
 import Login from './components/Login/login';
-import Account from './components/popups/account/index.js';
-import AccountInfor from './components/popups/account/infor.js';
-import AccountTrans from './components/popups/account/transfer.js';
+import Account from './components/popups/account/index';
+import AccountInfor from './components/popups/account/infor';
+import AccountTrans from './components/popups/account/transfer';
+import AccountInform from './components/popups/account/inform';
+import AccountPay from './components/popups/account/pay/index';
+import AccountPayGift from './components/popups/account/pay/giftcode';
 import ViewListSlider from './components/Category/CategorySlider';
+
 
 export default (
 	<Route path="/" component={App}>
@@ -29,8 +33,14 @@ export default (
 			<IndexRoute component={AccountInfor}/>
 			<Route path="/account/info" component={AccountInfor} />
 			<Route path="/account/tran" component={AccountTrans} />
-			<Route path="/account/pay" component={ClipAll} />
-			<Route path="/account/inform" component={RelClip} />
+			<Route path="/account/inform" component={AccountInform} />
+			<Route path="/account/pay" component={AccountPay}>
+				<IndexRoute component={AccountPayGift}/>
+				<Route path="/account/pay/gift" component={AccountPayGift} />
+				<Route path="/account/tran" component={AccountTrans} />
+				<Route path="/account/pay" component={ClipAll} />
+				<Route path="/account/inform" component={AccountInform} />
+			</Route>
 		</Route>
 		<Route path="/Video" component={VideoDetail}>
 	      	<IndexRoute component={Comments}/>

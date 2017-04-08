@@ -12,7 +12,7 @@ export default class AccountDetail extends React.Component {
                <div className="bg_overlay"></div>
                <div className="contentPopup">
                    <div className="btn_close"><img src="/app/assets/img/icon/btn_close.png"/></div>
-                   <VideoTab />
+                   <AccountTab />
                     { this.props.children }
                </div>
             </section>
