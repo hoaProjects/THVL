@@ -6,14 +6,14 @@ export class AccountPayGift extends React.Component {
 
         return (
             <section className="giftPayAcountBlock">
-                <article className="col">
+                <article className="content">
                     <section className="content-gift">
                         <span>Nhập mã Gift code:</span>
                         <input type="text" className="cls-input-gift-code"/>
                         <button>KÍCH HOẠT</button>
                     </section>
                 </article>
-                
+
             </section>
         );
     }

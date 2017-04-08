@@ -4,7 +4,11 @@
     top: 0;
     width: 100%;
     height: 100%;
-
+    &.m-fadeIn {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s linear 0s, opacity 300ms;
+    }
     .bg_overlay {
 
         height: 100%;
@@ -109,7 +113,7 @@
                     ::before {
                         margin-right: 5px;
                     }
-                }    
+                }
             }
             .loginEmail {
                 .btn-google {
@@ -125,7 +129,7 @@
                     ::before {
                             margin-right: 5px;
                     }
-                }    
+                }
             }
             .loginPhoneNumber {
                 .btn-phone {
@@ -144,7 +148,6 @@
                     }
                 }
             }
-            
         }
     }
 

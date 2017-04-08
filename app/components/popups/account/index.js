@@ -1,5 +1,6 @@
 import React from 'react';
-import AccountTab  from './component';
+import AppList from '../../../components/Common/TabAccount';
+
 export default class AccountDetail extends React.Component {
 
     constructor() {
@@ -13,12 +14,12 @@ export default class AccountDetail extends React.Component {
 
         return (
             <section className="Popup-Account" id="AccountPopup">
-               <div className="bg_overlay" onClick={this.popupHide.bind(this)}></div>
+               <div className="bg_overlay" ></div>
                <div className="contentPopup">
                    <div className="btn_close" id="btn_close" onClick={this.popupHide.bind(this)}><img src="/app/assets/img/icon/btn_close.png"/></div>
-                   <AccountTab />
-                   { this.props.children }
+                   <AppList />
                </div>
+
             </section>
         );
     }

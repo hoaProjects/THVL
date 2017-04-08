@@ -1,12 +1,13 @@
 import React from 'react';
-import Tabs from '../../../../components/Common/tab.js';
-import Pay from './giftcode';
+import Tabs from './tab.js';
+import Pay from '../../components/popups/account/pay/index';
 
 let tabListgitcode = [
     { 'id': 1, 'name': 'Gift code' },
     { 'id': 2, 'name': 'Thẻ cào' },
     { 'id': 3, 'name': 'Tin nhắn SMS' }
 ];
+
 export class ContentGitcode extends React.Component {
     render(){
         return(
@@ -16,11 +17,11 @@ export class ContentGitcode extends React.Component {
             	:null}
 
             	{this.props.currentTab === 2 ?
-            	<Pay />
+            	"Thẻ cào"
             	:null}
 
             	{this.props.currentTab === 3 ?
-	            <Pay />
+	            "Tin nhắn SMS"
             	:null}
 
             </div>
@@ -53,18 +54,4 @@ export class AppListGicode extends React.Component {
         );
     }
 }
-export default class PayAccount extends React.Component {
-
-    constructor() {
-        super();
-    }
-    render() {
-
-        return (
-            <section className="Popup-Pay-Account">
-                   <AppListGicode />
-            </section>
-        );
-    }
-
-}
+export default AppListGicode;

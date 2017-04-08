@@ -1,3 +1,7 @@
+
+
+$accent: #ff4081;
+$primary: #1976d2;
 /*====================Poppup Detail Account=======================*/
 .Popup-Account {
     position: fixed;
@@ -12,6 +16,7 @@
     transition: .3s all ease;
     visibility: hidden;
     opacity: 0;
+    z-index: 1000;
     &.m-fadeIn {
         visibility: visible;
         opacity: 1;
@@ -25,20 +30,21 @@
     top: 0;
     width: 100%;
     height: 100%;
-
     .bg_overlay {
 
         height: 100%;
         width: 100%;
         position: fixed;
-        // z-index: 2;
         top: 0;
         left: 0;
-        // background-color: rgba(0,0,0, 0.9);
         background-color: rgba(0,0,0, 0.6);
         overflow-x: auto;
         overflow: hidden;
-        transition: .5s;
+        -webkit-transition: .3s all ease;
+        -moz-transition: .3s all ease;
+        -o-transition: .3s all ease;
+        transition: .3s all ease;
+        transition: .3s all ease;
     }
     .contentPopup
     {
@@ -68,39 +74,35 @@
         .main-nav
         {
             font-size: 22px;
-            margin-top: 10px;
-            padding-bottom: 10px;
+            padding: 18px 0;
+            margin: 0;
             a {
-                    margin: 0 2%;
-                    font-size: 22px;
+                margin: 0 2%;
+                font-size: 20px;
+                padding: 1%;
             }
         }
         .row {
-
-                // clear: both;
-                span {
-                    line-height: 2.5;
-                    color: #cccccc;
-                    font-size: 16px;
-                    display: block;
-                    float: left;
-                    &:first-child {
-                        width: 163px;
-                    }
-                    &:last-child {
-                        width: 240px;
-                        font-weight: bold;
-                        color: #fff;
-                        &.typeFilm {
-                            color: #376bfb;
-                        }
+            span {
+                line-height: 2.5;
+                color: #cccccc;
+                font-size: 16px;
+                display: block;
+                float: left;
+                &:first-child {
+                    width: 163px;
+                }
+                &:last-child {
+                    width: 240px;
+                    font-weight: bold;
+                    color: #fff;
+                    &.typeFilm {
+                        color: #376bfb;
                     }
                 }
             }
+        }
         .inforAccountBlock {
-            height: 360px;
-            overflow-y: auto;
-            overflow-x: hidden;
             margin: auto;
             padding: 20px 10px;
             display: table;
@@ -119,10 +121,7 @@
 
         }
         .transAcountBlock {
-            height: 360px;
-            overflow-y: auto;
-            overflow-x: hidden;
-            .clearfix
+            .block
             {
                 border-bottom: 2px solid #333;
                 float: left;
@@ -130,70 +129,58 @@
                 margin-left: 25px;
                 margin-bottom: 10px;
             }
-            .col {
-                width: 90%;
-                padding-left: 10px;
-                margin-left: 10px;
-
-                .row {
-                    span:last-child {
-                    width: 300px;
-                    font-weight: bold;
-                    color: #fff;
-                    }
+            .row {
+                span:last-child {
+                width: 300px;
+                font-weight: bold;
+                color: #fff;
                 }
             }
         }
         .informAcountBlock {
-            height: 360px;
-            overflow-y: auto;
-            overflow-x: hidden;
-            .clearfix
-            {
-                border-bottom: 2px solid #333;
-                float: left;
-                width: 90%;
-                margin-bottom: 10px;
-            }
-            .col {
-                width: 100%;
-                margin-left: 25px;
-                margin-top: 15px;
+            .row {
+                clear: both;
+                border-bottom: 1px solid #333;
+                padding: 10px 0;
+                overflow: hidden;
+                margin: 0px 20px;
+                span {
+                    width: 90%;
+                    color : #fff;
+                    font-weight: normal;
 
-                .row {
-                    span {
-                        width: 90%;
-                        color : #fff;
-                        font-weight: normal;
-                        &.dicription {
-                            line-height: 1.5;
-                        }
-                        &.time {
-                            font-size: 13px;
-                        }
+                    &.dicription {
+                        line-height: 1.5;
+                    }
+                    &.time {
+                        font-size: 13px;
                     }
                 }
             }
         }
         .Popup-Pay-Account {
-
-            height: 280px;
-            float: left;
-            width: 100%;
-            padding: 30px;
-            .pay-nav {
+            clear: both;
+            padding-left: 33px;
+            padding: 40px 0px 40px 33px;
+            overflow: hidden;
+            .main-nav {
                 float: left;
                 border-bottom: none;
                 width: auto;
+                margin: 0;
+                padding: 0;
                 a {
                     float: left;
-                    padding: 10px 20px;
+                    padding: 14px 20px;
                     border-radius: 5px;
                     font-size: 18px;
                     text-transform: inherit;
                     color: #cccccc;
-                    &:hover {
+                    border: 0;
+                    margin:  0;
+                    margin-top: -6px;
 
+                    &:hover,&.current {
                         color: #fff;
                         background-color: #404040;
                         border-bottom: none;
@@ -209,41 +196,170 @@
             {
                 background-color: #404040;
                 float: left;
-                width: 90%;
+                width: 535px;
                 margin-top: -6px;
                 padding: 40px 0;
                 border-radius: 5px;
-                .col {
-                    font-size: 18px;
+                .content {
+                    font-size: 17px;
                     padding-left: 20px;
                     span {
-                        padding-right: 5px;
+
                         color: #fff
                     }
                     input {
                         height: 45px;
                         width: 40%;
-                        padding-right: 5px;
+                        padding: 0 5px;
                         background-color: #666666;
                         border-radius: 5px;
                         border:none;
+                        margin: 0 15px;
                     }
                     button {
                         font-weight: bold;
-                        margin-left: 10px;
                         background-color: #376bfb;
                         height: 45px;
                         border: none;
                         width: 100px;
                         color: #fff;
                         border-radius: 5px;
-
                     }
                 }
             }
         }
 
     }
-
+    &.Login {
+        .contentPopup
+        {
+            position: absolute;
+            top: 25%;
+            margin: auto;
+            border-radius: 6px;
+            background-color: rgb(38, 38, 38);
+            width: 400px;
+        /* margin: auto; */
+            padding-top: 5px;
+            margin-left: -200px;
+            left: 50%;
+            h3 {
+                color: #fff;
+            }
+            .col{
+                vertical-align: middle;
+                padding-right: 22px;
+            }
+            .btn_close {
+                position: absolute;
+                right: -80px;
+                top: 0;
+                cursor: pointer;
+                img {
+                    width: 60px;
+                }
+            }
+            .main-nav
+            {
+                font-size: 22px;
+                margin-top: 0;
+                padding-bottom: 18px;
+                a {
+                        margin: 0 2%;
+                        font-size: 22px;
+                }
+            }
+            .contentBlock {
+                margin: auto;
+                padding: 40px 10px;
+                text-align: center;
+                .btn-block + .btn-block {
+                    margin-top: 5px;
+                }
+                .btn-social {
+                    position: relative;
+                    padding-left: 44px;
+                    text-align: left;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+                .btn {
+                    display: inline-block;
+                    padding: 6px 64px;
+                    width: 160px;
+                    margin-bottom: 0;
+                    font-size: 14px;
+                    font-weight: normal;
+                    line-height: 1.42857143;
+                    text-align: center;
+                    white-space: nowrap;
+                    vertical-align: middle;
+                    cursor: pointer;
+                    margin: 5px 0;
+                    border: 1px solid transparent;
+                    border-radius: 4px;
+                }
+                .btn-social>:first-child {
+                    position: absolute;
+                    left: 15px;
+                    top: 0;
+                    bottom: 0;
+                    line-height: 34px;
+                    font-size: 1.6em;
+                    text-align: center;
+                }
+                .loginFacebook
+                {
+                    .btn-facebook {
+                        text-align: left;
+                        color: #fff;
+                        background-color: #3b5998;
+                        border-color: rgba(0,0,0,0.2);
+                        :hover {
+                            color: #fff;
+                            background-color: #2d4373;
+                            border-color: rgba(0,0,0,0.2);
+                        }
+                        ::before {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+                .loginEmail {
+                    .btn-google {
+                        text-align: left;
+                        color: #fff;
+                        background-color: #dd4b39;
+                        border-color: rgba(0,0,0,0.2);
+                        :hover {
+                            color: #fff;
+                            background-color: #c23321;
+                            border-color: rgba(0,0,0,0.2);
+                        }
+                        ::before {
+                                margin-right: 5px;
+                        }
+                    }
+                }
+                .loginPhoneNumber {
+                    .btn-phone {
+                        text-align: left;
+                        color: #fff;
+                        background-color: #55acee;
+                        border-color: rgba(0,0,0,0.2);
+                        :hover {
+                            color: #fff;
+                            background-color: #2795e9;
+                            border-color: rgba(0,0,0,0.2);
+                        }
+                        ::before
+                        {
+                                margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 //====================================================

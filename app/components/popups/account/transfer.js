@@ -6,7 +6,7 @@ export class AccountTrans extends React.Component {
 
         return (
             <section className="transAcountBlock">
-                <article className="col">
+                <article className="block">
                     <div className="row">
                         <span className="title">Ngày:</span>
                         <span className="text">1/1/2017</span>
@@ -24,8 +24,7 @@ export class AccountTrans extends React.Component {
                         <span className="text">100.000đ</span>
                     </div>
                 </article>
-                <div className="clearfix"></div>
-                <article className="col">
+                <article className="block">
                     <div className="row">
                         <span className="title">Ngày:</span>
                         <span className="text">1/1/2017</span>
@@ -43,7 +42,6 @@ export class AccountTrans extends React.Component {
                         <span className="text">100.000đ</span>
                     </div>
                 </article>
-                <div className="clearfix"></div>
             </section>
         );
     }

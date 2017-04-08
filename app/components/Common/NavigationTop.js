@@ -13,12 +13,13 @@ export class NavigationTop extends React.Component {
 
     }
     popupShow=()=>{
-        let select = document.getElementsByClassName("btn-avatar");
-        let popup = document.getElementsByClassName("Popup-Account")
         var element = document.getElementById("AccountPopup");
         element.className += " m-fadeIn";
     }
-    
+    popupShowLogin=()=>{
+        var element = document.getElementById("LoginPopup");
+        element.className += " m-fadeIn";
+    }
     render() {
         return (
             <nav>
@@ -27,7 +28,7 @@ export class NavigationTop extends React.Component {
                   <li><a href="#" className="btn-notification"><span>1</span></a></li>
                   <li><a href="#" className="btn-avatar" onClick={this.popupShow.bind(this)}><img src="/app/assets/img/avatar.png"/></a></li>
                   <li className="username">
-                      <a href="#">Đăng nhập</a>
+                      <a href="#" onClick={this.popupShowLogin.bind(this)}>Đăng nhập</a>
                       <ul className="submenu">
                           <li><a href="#">Trang cá nhân</a></li>
                           <li><a href="#">Thông tin</a></li>

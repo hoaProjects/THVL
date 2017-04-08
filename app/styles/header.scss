@@ -18,15 +18,16 @@ header {
         text-transform: uppercase;
         color: #ccc;
         margin: 0 1%;
-        &:hover {
+        &:hover, &.active {
             color: #376bfb;
         }
     }
-    &.video {
+    &.tab {
         margin-top: 40px;
         a {
-            &:hover {
+            &:hover, &.current {
                 border-bottom: 3px #376bfb solid;
+                color: #376bfb;
             }
         }
     }
