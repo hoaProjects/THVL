@@ -1,6 +1,22 @@
 /*====================Poppup Detail Account=======================*/
 .Popup-Account {
-
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: .3s all ease;
+    -moz-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    transition: .3s all ease;
+    visibility: hidden;
+    opacity: 0;
+    &.m-fadeIn {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s linear 0s, opacity 300ms;
+    }
     .abc{
         color: #fff;
     }
@@ -100,7 +116,7 @@
                 border: 2px #fff solid;
                 overflow: hidden;
             }
-            
+
         }
         .transAcountBlock {
             height: 360px;
@@ -118,7 +134,7 @@
                 width: 90%;
                 padding-left: 10px;
                 margin-left: 10px;
-                
+
                 .row {
                     span:last-child {
                     width: 300px;
@@ -143,7 +159,7 @@
                 width: 100%;
                 margin-left: 25px;
                 margin-top: 15px;
-                
+
                 .row {
                     span {
                         width: 90%;
@@ -177,7 +193,7 @@
                     text-transform: inherit;
                     color: #cccccc;
                     &:hover {
-                        
+
                         color: #fff;
                         background-color: #404040;
                         border-bottom: none;
@@ -196,7 +212,7 @@
                 width: 90%;
                 margin-top: -6px;
                 padding: 40px 0;
-                border-radius: 5px; 
+                border-radius: 5px;
                 .col {
                     font-size: 18px;
                     padding-left: 20px;

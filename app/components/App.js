@@ -7,6 +7,10 @@ import PopupAccount from '../components/popups/account/index';
 import '../styles/style.scss';
 
 class App extends React.Component {
+    constructor() {
+        super();
+    }
+
 
     render() {
         let pathname=this.props.location.pathname
@@ -20,7 +24,7 @@ class App extends React.Component {
                 <Navigation />
                 { this.props.children }
                 <Footer />
-                
+                <PopupAccount />
             </main>
         );
     }

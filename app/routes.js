@@ -29,19 +29,19 @@ export default (
 		<Route path="/listcategory" component={ViewListSlider} />
 		<Route path="/TV-Show" component={TVShow} />
 		<Route path="/login" component={Login} />
-		<Route path="/account" component={Account}>
-			<IndexRoute component={AccountInfor}/>
-			<Route path="/account/info" component={AccountInfor} />
-			<Route path="/account/tran" component={AccountTrans} />
-			<Route path="/account/inform" component={AccountInform} />
-			<Route path="/account/pay" component={AccountPay}>
-				<IndexRoute component={AccountPayGift}/>
-				<Route path="/account/pay/gift" component={AccountPayGift} />
-				<Route path="/account/tran" component={AccountTrans} />
-				<Route path="/account/pay" component={ClipAll} />
-				<Route path="/account/inform" component={AccountInform} />
-			</Route>
-		</Route>
+		// <Route path="/account" component={Account}>
+		// 	<IndexRoute component={AccountInfor}/>
+		// 	<Route path="/account/info" component={AccountInfor} />
+		// 	<Route path="/account/tran" component={AccountTrans} />
+		// 	<Route path="/account/inform" component={AccountInform} />
+		// 	<Route path="/account/pay" component={AccountPay}>
+		// 		<IndexRoute component={AccountPayGift}/>
+		// 		<Route path="/account/pay/gift" component={AccountPayGift} />
+		// 		<Route path="/account/tran" component={AccountTrans} />
+		// 		<Route path="/account/pay" component={ClipAll} />
+		// 		<Route path="/account/inform" component={AccountInform} />
+		// 	</Route>
+		// </Route>
 		<Route path="/Video" component={VideoDetail}>
 	      	<IndexRoute component={Comments}/>
 			<Route path="/Video/info" component={Info} />
