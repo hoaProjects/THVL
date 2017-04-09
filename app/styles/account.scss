@@ -250,15 +250,6 @@ $primary: #1976d2;
                 vertical-align: middle;
                 padding-right: 22px;
             }
-            .btn_close {
-                position: absolute;
-                right: -80px;
-                top: 0;
-                cursor: pointer;
-                img {
-                    width: 60px;
-                }
-            }
             .main-nav
             {
                 font-size: 22px;
@@ -270,94 +261,56 @@ $primary: #1976d2;
                 }
             }
             .contentBlock {
-                margin: auto;
-                padding: 40px 10px;
-                text-align: center;
-                .btn-block + .btn-block {
-                    margin-top: 5px;
-                }
+                padding: 30px 50px;
                 .btn-social {
-                    position: relative;
-                    padding-left: 44px;
-                    text-align: left;
-                    white-space: nowrap;
-                    overflow: hidden;
-                }
-                .btn {
-                    display: inline-block;
-                    padding: 6px 64px;
-                    width: 160px;
-                    margin-bottom: 0;
+                    display: block;
+                    padding: 10px 40px;
                     font-size: 14px;
-                    font-weight: normal;
-                    line-height: 1.42857143;
-                    text-align: center;
-                    white-space: nowrap;
-                    vertical-align: middle;
+                    line-height: 1.4;;
                     cursor: pointer;
-                    margin: 5px 0;
-                    border: 1px solid transparent;
+                    margin: 10px 0;
                     border-radius: 4px;
-                }
-                .btn-social>:first-child {
-                    position: absolute;
-                    left: 15px;
-                    top: 0;
-                    bottom: 0;
-                    line-height: 34px;
-                    font-size: 1.6em;
-                    text-align: center;
-                }
-                .loginFacebook
-                {
-                    .btn-facebook {
-                        text-align: left;
-                        color: #fff;
-                        background-color: #3b5998;
-                        border-color: rgba(0,0,0,0.2);
-                        :hover {
-                            color: #fff;
-                            background-color: #2d4373;
-                            border-color: rgba(0,0,0,0.2);
-                        }
-                        ::before {
-                            margin-right: 5px;
+                    background-color: #3b5997;
+                    color: #fff;
+                    text-align: left;
+                    position: relative;
+                    &::before {
+                        content: '';
+                        display: block;
+                        background: url(/app/assets/img/icon/i-facebook.png) transparent left center no-repeat;
+                        width: 12px;
+                        background-size: 12px auto;
+                        height: 26px;
+                        position: absolute;
+                        left: 18px;
+                        top: 6px;
+                    }
+                    &.facebook {
+                        &::before {
+                            background: url(/app/assets/img/icon/i-facebook.png) transparent left center no-repeat;
+                            background-size: 12px auto;
                         }
                     }
-                }
-                .loginEmail {
-                    .btn-google {
-                        text-align: left;
-                        color: #fff;
-                        background-color: #dd4b39;
-                        border-color: rgba(0,0,0,0.2);
-                        :hover {
-                            color: #fff;
-                            background-color: #c23321;
-                            border-color: rgba(0,0,0,0.2);
-                        }
-                        ::before {
-                                margin-right: 5px;
+                    &.email {
+                        background-color: #de4d32;
+                        padding-left: 50px;
+                        &::before {
+                            background: url(/app/assets/img/icon/i-email.png) transparent left center no-repeat;
+                            background-size: 20px auto;
+                            width: 20px;
                         }
                     }
-                }
-                .loginPhoneNumber {
-                    .btn-phone {
-                        text-align: left;
-                        color: #fff;
-                        background-color: #55acee;
-                        border-color: rgba(0,0,0,0.2);
-                        :hover {
-                            color: #fff;
-                            background-color: #2795e9;
-                            border-color: rgba(0,0,0,0.2);
-                        }
-                        ::before
-                        {
-                                margin-right: 5px;
+                    &.phone {
+                        background-color: #3366ff;
+                        &::before {
+                            background: url(/app/assets/img/icon/i-phone.png) transparent left center no-repeat;
+                            background-size: 12px auto;
                         }
                     }
+
+
                 }
+                ///
             }
         }
     }

@@ -23,21 +23,9 @@ export default class PopupAccount extends React.Component {
                         <h3>ĐĂNG NHẬP</h3>
                     </nav>
                     <section className="contentBlock">
-                        <section className="loginFacebook">
-							<a className="btn btn-block btn-social btn-facebook">
-            					<span className="fa fa-facebook"></span> Đăng nhập bằng facebook
-          					</a>
-                        </section>
-                        <section className="loginEmail">
-							<a className="btn btn-block btn-social btn-google">
-							    <span className="fa fa-inbox"></span> Đăng nhập bằng email
-							</a>
-                        </section>
-                        <section className="loginPhoneNumber">
-							<a className="btn btn-block btn-social btn-phone" >
-							    <span className="fa fa-mobile-phone"></span> Đăng nhập bằng số điện thoại
-							</a>
-                        </section>
+                        <a className="btn-social facebook">Đăng nhập bằng facebook</a>
+                        <a className="btn-social email">Đăng nhập bằng email</a>
+                        <a className="btn-social phone">Đăng nhập bằng số điện thoại</a>
                     </section>
                 </div>
             </section>
