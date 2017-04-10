@@ -78,7 +78,7 @@ export default class LiveAll extends React.Component {
     render() {
 
         return (
-            <section className="LiveAll">
+            <section className="LiveHome All">
                 <TitleSlider title="Kênh THVL" />
                 <SliderListLive cls="item itemLive"  data={this.state.data1} />
                 <TitleSlider title="KÊNH HTV" />

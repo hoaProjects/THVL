@@ -68,18 +68,6 @@
 
         }
         .slick-next {
-            background: url(/app/assets/img/arrow.png) transparent left center no-repeat;
-            text-indent:-99999px;
-            border: none;
-            outline: none;
-            width: 20px;
-            height: 30px;
-            position: absolute;
-            left: -50px;
-            top: 50%;
-            margin-top: -20px;
-        }
-        .slick-prev {
             background: url(/app/assets/img/arrow.png) transparent right center no-repeat;
             text-indent:-99999px;
             border: none;
@@ -91,32 +79,37 @@
             top: 50%;
             margin-top: -20px;
         }
+        .slick-prev {
+            background: url(/app/assets/img/arrow.png) transparent left center no-repeat;
+            text-indent:-99999px;
+            border: none;
+            outline: none;
+            width: 20px;
+            height: 30px;
+            position: absolute;
+            left: -50px;
+            top: 50%;
+            margin-top: -20px;
+        }
     }
-    .itemLive {
-        width: 210px;
-        img {
+    &.All {
+        .listSlider  {
+            clear: both;
+            padding: 40px 0;
+            margin: 0;
+            .slick-next {
+                right: -27px;
+            }
+            .slick-prev {
+                left: -27px;
+            }
+        }
+        .head {
+            padding-top: 13px;
+            overflow: hidden;
+        }
+    }
 
-        }
-        &:hover {
-            -webkit-transition: none;
-            -webkit-transform: none;
-            -ms-transition: none;
-            -ms-transform: none;
-            -moz-transition: none;
-            -moz-transform: none;
-            transition: none;
-            transform: none;
-        }
-    }
-    .sliderBlock {
-        width: 1259px;
-        margin: 0 auto;
-        overflow: hidden;
-        padding-top: 0;
-    }
-    a.slick-arrow:after {
-        display: none;
-    }
 }
 /*===========================================*/
 .item {
