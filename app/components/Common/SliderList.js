@@ -107,6 +107,11 @@ export default class categoryList extends React.Component {
         document.getElementsByTagName('body')[0].removeAttribute('style');
         event.currentTarget.parentElement.parentElement.removeAttribute('style');
     }
+    popupVideoDetail=()=>{
+        var element = document.getElementById("infoVideoPopup");
+        debugger;
+        element.className += " m-fadeIn";
+    }
     render() {
         function PrevButton({ onClick }) {
             return <a onClick={onClick} className="slick-arrow slick-prev"><span></span></a>;
@@ -126,13 +131,14 @@ export default class categoryList extends React.Component {
             prevArrow: <PrevButton />,
             nextArrow: <NextButton />
         };
+        
         return (
             <div className="sliderBlock">
                 <BlockSlider {...blocksettings}>
 
                     {this.state.category.map((category, i) => (
                         <article key={i} className="item" onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} >
-                            <a href="#">
+                            <a href="#" onClick={this.popupVideoDetail.bind(this)}>
                                 <img src={category.src} />
                                 <div className="iconPlay"></div>
                                 <div className="description">

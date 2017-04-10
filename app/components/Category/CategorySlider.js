@@ -1,5 +1,7 @@
 import React from 'react';
 import CategoryList from './../common/SliderList';
+import PopupVideo from './../common/PopupVideo';
+
 
 const CategorySlider = () =>
     <section className="home">
@@ -7,7 +9,9 @@ const CategorySlider = () =>
             <h3 className="title">ĐANG XEM</h3>
             <a href="/listcategory" className="viewall">Tất cả</a>
         </div>
+       
         <CategoryList categoryType = {'viewing'}/>
+         <PopupVideo />
         <div className="head">
             <h3 className="title">THVL ĐỀ XUẤT</h3>
             <a href="/listcategory" className="viewall">Tất cả</a>

@@ -1,0 +1,63 @@
+.home {
+	.infoBlock {
+		
+		visibility: hidden;
+        opacity: 0;
+        
+       
+		&.m-fadeIn {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s linear 0s, opacity 300ms;
+    	}
+    	.bg_overlay {
+    		top: 25%;
+    		position: fixed;
+    		z-index: 1;
+    		img {
+    			height: 300px;
+    			width: 100%;
+    			object-fit: cover;
+    			background: rgba(19,19,19,1);
+				
+    		}
+    	}
+    	.contentPopup {
+    		position: absolute;
+			top: 0;
+    		z-index: 2;
+    		.col {
+    			width: 40%;
+    			float: left;
+    			    padding-left: 2%;
+    			    padding-right: 0;
+    				.iconPlay{
+    					background: url(/app/assets/img/icon/play_icon.png) transparent right center no-repeat;
+				    width: 80px;
+				    height: 80px;
+				    position: absolute;
+				    right: 20%;
+    				top: 43%;
+				    opacity: 1;
+				    -webkit-transition: all 200ms ease-out;
+				    -ms-transition: all 200ms ease-out;
+				    -moz-transition: all 200ms ease-out;
+				    transition: all 200ms ease-out;
+    			}
+    			.trailer-button {
+    				position: absolute;
+    				bottom: 0;
+    				right: 30px;
+    				background-color: #376bfb;
+    		
+    				padding: 10px 40px;
+    				border: none;
+    				border-radius: 5px;
+    				font-size: 20px;
+    				color: #fff;
+    				font-weight: bold;
+    			}
+    		}
+    	}
+	}
+}
