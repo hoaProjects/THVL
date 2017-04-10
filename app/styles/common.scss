@@ -32,6 +32,14 @@
     -moz-transform: scale(1);
     transition: all 200ms ease-out;
     transform: scale(1);
+    &.itemLive {
+        a {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            overflow: hidden;
+            display: block;
+        }
+    }
     .iconPlay {
         background: url("/app/assets/img/icon/play_icon.png") transparent  right center no-repeat;
         width: 80px;
@@ -380,3 +388,10 @@ h3 {
 }
 
 // //====================================================
+.sliderLive {
+    clear: both;
+    .item {
+        display: inline-block;
+        width: 432px;
+    }
+}

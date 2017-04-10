@@ -4,6 +4,7 @@ import App from './components/App';
 import HomePage from './components/Home/index';
 import TVShow from './components/TVShow/index';
 import LiveHome from './components/live/index';
+import LiveAll from './components/liveAll/index';
 import VideoDetail from './components/VideoDetail/index';
 import Comments from './components/VideoDetail/comments';
 import Info from './components/VideoDetail/info';
@@ -18,6 +19,7 @@ export default (
 	<Route path="/" component={App}>
 		<IndexRoute component={HomePage} />
 		<Route path="/Live" component={LiveHome} />
+		<Route path="/Liveall" component={LiveAll} />
 		<Route path="/viewall" component={ViewAll} />
 		<Route path="/listcategory" component={ViewListSlider} />
 		<Route path="/TV-Show" component={TVShow} />
