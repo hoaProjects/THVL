@@ -4,6 +4,7 @@ import Comments from '../../components/Common/comments';
 import CategoryList from './../common/SliderList';
 import TitleSlider from '../../components/Common/titleList';
 import SliderListLive from '../../components/Common/sliderListLive';
+import Liveschedule from '../../components/Common/Liveschedule';
 
 export default class LiveHome extends React.Component {
     constructor() {
@@ -29,8 +30,12 @@ export default class LiveHome extends React.Component {
 
         return (
             <section className="LiveHome">
-                <VideoPlay  />
-                <SliderListLive cls="item itemLive" data={this.state.data} />
+                <div className="innerVideoLive">
+                    <VideoPlay  />
+                    <Liveschedule />
+                </div>
+
+                <SliderListLive data={this.state.data} />
                 <Comments />
             </section>
         );
