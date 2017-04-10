@@ -13,9 +13,7 @@ video {
 /* controls */
 .controls > * {
 	float:left;
-	width:3.90625%;
 	height:100%;
-	margin-left:0.1953125%;
 	display:block;
 }
 .controls, .controls > * {
@@ -23,7 +21,6 @@ video {
 	margin:0;
 }
 .controls {
-	overflow: hidden;
 	background: transparent;
 	width: 90%;
 	height: 28px;
@@ -38,6 +35,61 @@ video {
 	}
 	&[data-state=visible] {
 		display:block;
+	}
+	section {
+		width: 4%;
+		height: 100%;
+		button {
+			width: 100%;
+			height: 100%;
+		}
+		&.mute {
+
+		}
+		&.fs {
+
+		}
+		&.config {
+
+		}
+		&.playpause {
+
+		}
+		&.heart {
+
+		}
+		&.link {
+
+		}
+		&.cc {
+			width: 5%;
+		}
+	}
+
+	.toolBar {
+		position: absolute;
+		bottom: 58px;
+		padding: 0;
+		background-color: rgba(0,0,0, 0.3);
+		-webkit-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+		visibility: hidden;
+		opacity: 0;
+		margin-left: -5%;
+		&.active {
+			visibility: visible;
+			opacity: 1;
+		}
+		a {
+			color: #fff;
+			display: block;
+			padding: 12px 40px;
+			&:hover {
+				background-color: #4d4d4d;
+			}
+		}
 	}
 	.progress {
 		cursor:pointer;
@@ -70,7 +122,7 @@ video {
 		}
 		&[data-state="play"]  {
 			background: url("/app/assets/img/icon/fa-play.png") transparent  left center no-repeat;
-			
+
 		}
 		&[data-state="pause"] {
 			background: url("/app/assets/img/icon/i-pause.png") transparent  left center no-repeat;
@@ -97,7 +149,6 @@ video {
 		}
 		&[data-state="cc"] {
 			background: url("/app/assets/img/icon/fa-cc.png") transparent  left center no-repeat;
-			width: 4.5%;
 		}
 		&[data-state="config"] {
 			background: url("/app/assets/img/icon/fa-cog.png") transparent  left center no-repeat;
@@ -123,6 +174,7 @@ video {
 			background-color:#2a84cd;
 			 position: relative;
 			 top: -6px;
+			 height: 7px;
 		}
 		.progress-button {
 			width: 30px;
