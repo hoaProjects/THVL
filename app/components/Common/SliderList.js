@@ -109,7 +109,6 @@ export default class categoryList extends React.Component {
     }
     popupVideoDetail=()=>{
         var element = document.getElementById("infoVideoPopup");
-        debugger;
         element.className += " m-fadeIn";
     }
     render() {
