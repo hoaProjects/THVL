@@ -1,5 +1,6 @@
 import React from 'react';
 import SliderListLive from '../../components/Common/sliderListLive';
+import TitleSlider from '../../components/Common/titleList';
 
 export default class LiveAll extends React.Component {
     constructor() {
@@ -78,10 +79,14 @@ export default class LiveAll extends React.Component {
 
         return (
             <section className="LiveAll">
-                <SliderListLive title="Kênh THVL" data={this.state.data1} />
-                <SliderListLive title="KÊNH HTV" data={this.state.data2} />
-                <SliderListLive title="VTV" data={this.state.data3} />
-                <SliderListLive title="KÊNH NƯỚC NGOÀI" data={this.state.data4} />
+                <TitleSlider title="Kênh THVL" />
+                <SliderListLive cls="item itemLive"  data={this.state.data1} />
+                <TitleSlider title="KÊNH HTV" />
+                <SliderListLive cls="item itemLive" data={this.state.data2} />
+                <TitleSlider title="VTV" />
+                <SliderListLive  cls="item itemLive" data={this.state.data3} />
+                <TitleSlider title="KÊNH NƯỚC NGOÀI" />
+                <SliderListLive  cls="item itemLive" data={this.state.data4} />
             </section>
         );
     }

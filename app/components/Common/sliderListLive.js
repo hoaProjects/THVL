@@ -6,7 +6,7 @@ export default class SliderListLive extends React.Component {
         super();
         this.onMouseEnter  = this.handleMouseEnter.bind(this);
         this.onMouseLeave  = this.handleMouseLeave.bind(this);
-        
+
     }
     handleMouseEnter(event) {
         event.currentTarget.parentElement.parentElement.style.overflow = 'visible';
@@ -35,23 +35,17 @@ export default class SliderListLive extends React.Component {
             nextArrow: <NextButton />
         };
         return (
-            <section className="block">
-                <div className="head">
-                    <h3 className="title">{this.props.title}</h3>
-                    <a href="/listcategory" className="viewall">Tất cả</a>
-                </div>
-                <div className="sliderBlock">
-                    <BlockSlider {...blocksettings}>
-                        {this.props.data.map((category, i) => (
-                            <article key={i} className="item itemLive" onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} >
-                                <a href="#">
-                                    <img src={category.src} />
-                                </a>
-                            </article>
-                        ))}
-                    </BlockSlider>
-                </div>
-            </section>
+            <div className="sliderBlock">
+                <BlockSlider {...blocksettings}>
+                    {this.props.data.map((category, i) => (
+                        <article key={i} className={this.props.cls} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} >
+                            <a href="#">
+                                <img src={category.src} />
+                            </a>
+                        </article>
+                    ))}
+                </BlockSlider>
+            </div>
 
         );
     }
