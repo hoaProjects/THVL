@@ -34,7 +34,6 @@ export default class LiveHome extends React.Component {
                     <VideoPlay  />
                     <Liveschedule />
                 </div>
-
                 <SliderListLive data={this.state.data} />
                 <Comments />
             </section>
