@@ -1,0 +1,47 @@
+@media only screen and (max-width: 640px) {
+    body {
+        min-width: 640px;
+        overflow-x: auto!important;
+    }
+    a.mobileButton {
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.25em;
+            width: 1em;
+            height: 0.15em;
+            background: #376bfb;
+            box-shadow: 0 0.25em 0 0 #376bfb, 0 0.5em 0 0 #376bfb;
+        }
+    }
+    header{
+        min-width: 640px;
+    }
+    .item {
+        .description {
+            .heart {
+                margin-left: 0;
+            }
+        }
+    }
+    .main-nav{
+        position: relative;
+        .mainNavigation{
+            background: #262626;
+            position: absolute;
+            width: 100%;
+            top: 105px;
+            z-index: 1000;
+            a{
+                display: block;
+                width: 100%;
+                padding-bottom: 10px;
+            }
+            &.hidden{
+                display: none;
+            }
+        }
+    }
+}
