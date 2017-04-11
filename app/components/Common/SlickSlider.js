@@ -1,33 +1,13 @@
 import React from 'react';
 import Slider from 'react-slick';
+import SliderBanner from '../../components/json/sliderBanner';
+const dataImg=SliderBanner.data;
 
 export default class SlickSlider extends React.Component {
     constructor() {
         super();
         this.state = {
-            data:
-            [
-                {
-                    'id': 1,
-                    'name': 'Slider 1',
-                    'src': '../app/assets/img/slider-1.jpg'
-                },
-                {
-                    'id': 2,
-                    'name': 'Slider 2',
-                    'src': '../app/assets/img/slider-1.jpg'
-                },
-                {
-                    'id': 2,
-                    'name': 'Slider 2',
-                    'src': '../app/assets/img/slider-1.jpg'
-                },
-                {
-                    'id': 2,
-                    'name': 'Slider 2',
-                    'src': '../app/assets/img/slider-1.jpg'
-                }
-            ]
+            data:dataImg
         };
     }
 
@@ -35,7 +15,6 @@ export default class SlickSlider extends React.Component {
         function PrevButton({ onClick }) {
             return <a onClick={onClick} className="slick-arrow slick-prev" style={{ left: '15px' }}></a>;
         }
-
         function NextButton({ onClick }) {
             return <a onClick={onClick} className="slick-arrow slick-next" style={{ right: '15px' }}></a>;
         }

@@ -126,6 +126,22 @@
 
 }
 /*===========================================*/
+.iconPlay {
+    background: url("/app/assets/img/icon/play_icon.png") transparent  right center no-repeat;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -80px;
+    margin-left: -40px;
+    opacity: 0;
+    -webkit-transition: all 200ms ease-out;
+    -ms-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+/*===========================================*/
 .item {
     border-radius: 5px;
     margin: 3px;
@@ -139,6 +155,7 @@
     -moz-transform: scale(1);
     transition: all 200ms ease-out;
     transform: scale(1);
+    background: #000;
     &.itemLive {
         a {
             border-top-left-radius: 5px;
@@ -147,21 +164,27 @@
             display: block;
         }
     }
-    .iconPlay {
-        background: url("/app/assets/img/icon/play_icon.png") transparent  right center no-repeat;
-        width: 80px;
-        height: 80px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        margin-top: -40px;
-        margin-left: -40px;
-        opacity: 0;
-        -webkit-transition: all 200ms ease-out;
-        -ms-transition: all 200ms ease-out;
-        -moz-transition: all 200ms ease-out;
-        transition: all 200ms ease-out;
+    .arrowShow {
+        width: 19px;
+        height: 19px;
+        background: url("/app/assets/img/icon/arrow-show-popup.png") transparent  right center no-repeat;
+        background-size: 80%;
+        margin: 2px auto 0;
+        padding-bottom: 15px;
+        display: none;
     }
+    .text {
+        clear: both;
+        padding: 0px 0 14px;
+        overflow: hidden;
+        display: none;
+    }
+    .line {
+        width: 20%;
+        background-color: $color-blue;
+        height: 3px;
+    }
+
     a{
         color: #fff;
         img {
@@ -169,53 +192,61 @@
         }
     }
     &:hover{
-        box-shadow: 0px 0px 4px #000000;
+        box-shadow: 0px 0px 5px #373636;
         -webkit-transition: all 200ms ease-out;
-        -webkit-transform: scale(1.2);
+        -webkit-transform: scale(1.1);
         -ms-transition: all 200ms ease-out;
-        -ms-transform: scale(1.2);
+        -ms-transform: scale(1.1);
         -moz-transition: all 200ms ease-out;
-        -moz-transform: scale(1.2);
+        -moz-transform: scale(1.1);
         transition: all 200ms ease-out;
-        transform: scale(1.2);
+        transform: scale(1.1);
         position: relative;
         z-index: 99;
         .iconPlay {
             opacity: 1;
         }
+        .text {
+            display: block;
+        }
+        .arrowShow{
+            display: block;
+        }
+
+    }
+    .description {
+
+        min-height: 74px;
+        padding: 0px 15px 15px;
+        h6 {
+            font-size: 18px;
+            padding: 14px 0;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+        }
+        .play {
+            font-size: 14px;
+            float: left;
+            background: url("/app/assets/img/icon/i-play.png") transparent  left center no-repeat;
+            padding-left: 24px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+        }
+        .heart {
+            font-size: 14px;
+            float: left;
+            background: url("/app/assets/img/icon/heart.png") transparent  left center no-repeat;
+            padding-left: 28px;
+            height: 16px;
+            line-height: 16px;
+            margin-left: 30px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+        }
     }
 }
 /*===========================================*/
-.description {
-    background: #000;
-    min-height: 74px;
-    padding: 0px 15px;
-    h6 {
-        font-size: 18px;
-        padding: 14px 0;
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-    }
-    .play {
-        font-size: 14px;
-        float: left;
-        background: url("/app/assets/img/icon/i-play.png") transparent  left center no-repeat;
-        padding-left: 24px;
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-    }
-    .heart {
-        font-size: 14px;
-        float: left;
-        background: url("/app/assets/img/icon/heart.png") transparent  left center no-repeat;
-        padding-left: 28px;
-        height: 16px;
-        line-height: 16px;
-        margin-left: 30px;
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-    }
-}
+
 /*===========================================*/
 .list-video {
     clear: both;
