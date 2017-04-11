@@ -63,8 +63,63 @@
     }
     .VideoPlay{
         margin-top: 80px;
+        .controls{
+                top: -40px;
+            padding: 15px 0px 15px 15px;
+            .playpause{
+                float: left;
+                margin-top: -7px;
+            }
+
+            .time {
+                width: 14%;
+            }
+            .progress{
+                    width: 53%;
+            }
+            .progress,  .time{
+                float: left;
+                position: relative;
+            }
+            .progress, .time {
+                margin-left: 0;
+                left: 0;
+                margin-top: -14px;
+            }
+            .time {
+                margin-top: -12px;
+            }
+            &> *{
+                    margin-top: -7px;
+            }
+            button{
+                background-size: contain;
+
+
+            }
+        }
+
     }
-    .slick-slider .slick-track, .slick-slider .slick-list{
-        
+    .Popup-Account.Trailer .contentPopup .btn_close {
+        left: 0;
+    }
+    .Popup-Account.Trailer .contentPopup{
+        margin-left: 0;
+        left: 0;
+        width: 100%;
+    }
+    .main-nav{
+        a{
+            font-size: 20px;
+                margin: 0 2%;
+        }
+    }
+    .infoBlock {
+        .col{
+            width: 100%;
+            &.right {
+                width: 100%;
+            }
+        }
     }
 }
