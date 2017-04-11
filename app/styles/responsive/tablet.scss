@@ -1,0 +1,14 @@
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+    .controls {
+        .time{
+            width: 14%;
+        }
+        .progress{
+                width: 53%;
+        }
+    }
+    .main-nav a{
+        padding-bottom: 12px!important;
+        display: inline-block;
+    }
+}
