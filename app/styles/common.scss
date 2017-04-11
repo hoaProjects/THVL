@@ -19,20 +19,34 @@
     }
 }
 /*===========================================*/
-.container.Live {
+.container.live {
     background-color: #000;
+    .commentBlock {
+
+    }
     .main-nav {
         padding-top: 89px;
         margin-top: 0;
     }
 }
+
 .LiveHome {
+
     .innerVideoLive {
-        clear: both;
+        width: 100%;
+        display: table;
+        .row-clear {
+            display: table-row;
+        }
+        .VideoPlay {
+            display: table-cell;
+            width: 77%;
+        }
     }
     .listSlider {
         padding: 0 10%;
         margin-top: -18px;
+        clear: both;
         .slick-slide {
             color: #fff;
             position: relative;
@@ -487,4 +501,65 @@ h3 {
         display: inline-block;
         width: 432px;
     }
+}
+//============================================================
+
+body .area {
+    margin: 0 auto;
+    width: 100%;
+    height: 340px;
+}
+.scrollarea-content {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative
+}
+.scrollarea-content:focus {
+    outline: 0
+}
+.scrollarea {
+    position: relative;
+    overflow: hidden
+}
+.scrollarea .scrollbar-container {
+    position: absolute;
+    background: none;
+    opacity: .3 !important;
+    z-index: 9999;
+    -webkit-transition: all .4s;
+    transition: all .4s
+}
+.scrollarea .scrollbar-container.horizontal {
+    width: 100%;
+    height: 10px;
+    left: 0;
+    bottom: 0
+}
+.scrollarea .scrollbar-container.horizontal .scrollbar {
+    width: 20px;
+    height: 8px;
+    background: #000;
+    margin-top: 1px
+}
+.scrollarea .scrollbar-container.vertical {
+    width: 6px !important;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: gray;
+}
+.scrollarea .scrollbar-container.vertical .scrollbar {
+    width: 6px;
+    height: 20px;
+    background: #376bfb !important;
+    margin-left: 0 !important;;
+}
+.scrollarea .scrollbar-container.active,
+.scrollarea .scrollbar-container:hover {
+    background: gray;
+    opacity: .6!important
+}
+.scrollarea:hover .scrollbar-container {
+    opacity: .3
 }
