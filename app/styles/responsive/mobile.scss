@@ -35,7 +35,7 @@
             background: #262626;
             position: absolute;
             width: 100%;
-            top: 85px;
+            top: 105px;
             z-index: 1000;
             a{
                 display: block;
@@ -52,5 +52,19 @@
                 display: block;
             }
         }
+    }
+    .list-video {
+        padding: 30px 15px;
+    }
+    .contentPopup{
+        width: 100%;
+        margin-left: 0;
+        left: 0;
+    }
+    .VideoPlay{
+        margin-top: 80px;
+    }
+    .slick-slider .slick-track, .slick-slider .slick-list{
+        
     }
 }

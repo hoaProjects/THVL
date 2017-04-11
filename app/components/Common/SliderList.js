@@ -71,7 +71,7 @@ export default class categoryList extends React.Component {
                 <BlockSlider {...blocksettings}>
 
                     {this.state.category.map((category, i) => (
-                        <article key={i} className="item" onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} >
+                        <article key={i} className="item" onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} onTouchEnd={this.onMouseLeave}>
                             <a href="#">
                                 <img src={category.src} />
                                 <div className="line"></div>
