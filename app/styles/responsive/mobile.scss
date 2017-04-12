@@ -8,6 +8,8 @@
         float: left;
         margin-top: -17px!important;
         margin-left: 15px!important;
+        width: 40px;
+    height: 40px;
         &:before {
             content: "";
             position: absolute;
@@ -17,6 +19,16 @@
             height: 6px;
             background: #376bfb;
             box-shadow: 0 13px 0 0 #376bfb, 0 26px 0 0 #376bfb;
+        }
+        &.show {
+            &:before{
+                box-shadow: none;
+                background: transparent;
+                content: "X";
+                font-family: 'Roboto', sans-serif;
+                font-weight: 700;
+                    font-size: 36px;
+            }
         }
     }
     header{

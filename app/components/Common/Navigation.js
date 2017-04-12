@@ -18,7 +18,7 @@ export class Navigation extends React.Component {
     render(){
         return (
             <nav className="main-nav">
-                <a className="mobileButton" href="#" onClick={this.handleClick.bind(this)}></a>
+                <a className={this.state.showHideMobileButton + ' mobileButton'} href="#" onClick={this.handleClick.bind(this)}></a>
                 <div className={this.state.showHideMobileButton + ' mainNavigation'}>
                     <Link to="/" activeClassName="active">Trang chủ</Link>
                     <Link to="/truyen-hinh" activeClassName="active">Truyền hình</Link>
