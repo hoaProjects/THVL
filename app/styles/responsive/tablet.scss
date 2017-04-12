@@ -1,4 +1,4 @@
-@media only screen and (min-width: 641px) and (max-width: 992px) {
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
     .controls {
         .time{
             width: 14%;
@@ -73,5 +73,14 @@
                  top: -5px;
              }
          }
+    }
+    .LiveSchedule .head {
+        width: 100%;
+        h3{
+            font-size: 23px;
+        }
+        a{
+            font-size: 16px;
+        }
     }
 }
