@@ -101,7 +101,13 @@
                 }
             }
         }
-
+    }
+    .LiveSchedule, .LiveHome .innerVideoLive .VideoPlay{
+        width: 100%;
+        display: block;
+    }
+    .LiveHome .innerVideoLive{
+        padding-bottom: 40px;
     }
     .Popup-Account.Trailer .contentPopup .btn_close {
         left: 0;
@@ -116,6 +122,9 @@
             font-size: 20px;
                 margin: 0 2%;
         }
+    }
+    .commentBlock .box-input textarea{
+        width: 96%;
     }
     .infoBlock {
         .col{

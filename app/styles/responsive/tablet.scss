@@ -43,4 +43,22 @@
             }
         }
     }
+    .LiveSchedule, .LiveHome .innerVideoLive .VideoPlay{
+        width: 100%;
+        display: block;
+    }
+    .LiveHome .innerVideoLive{
+        padding-bottom: 40px;
+    }
+    .Popup-Account.Trailer .contentPopup .btn_close {
+        left: 0;
+    }
+    .Popup-Account.Trailer .contentPopup{
+        margin-left: 0;
+        left: 0;
+        width: 100%;
+    }
+    .commentBlock .box-input textarea{
+        width: 96%;
+    }
 }
