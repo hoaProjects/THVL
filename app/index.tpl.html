@@ -3,10 +3,22 @@
 
 <head>
     <meta charset="utf-8">
+
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>THVL</title>
     <meta name="description" content="Truyen Hinh Vinh Long">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    if (navigator.userAgent.match(/Tablet|iPad/i))
+    {
+        document.write("<meta name='viewport' content='width=device-width, initial-scale=1'>");
+    } else if(navigator.userAgent.match(/Mobile|Windows Phone|Lumia|Android|webOS|iPhone|iPod|Blackberry|PlayBook|BB10|Opera Mini|\bCrMo\/|Opera Mobi/i) )
+    {
+        document.write("<meta name='viewport' content='width=640'>");
+    } else {
+        // do desktop stuff
+    }
+    </script>
+
 </head>
 
 <body class="view-login">
