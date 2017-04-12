@@ -83,4 +83,12 @@
             font-size: 16px;
         }
     }
+    .LiveHome.All .listSlider {
+        .slick-next{
+            right: -15px;
+        }
+        .slick-prev{
+            left: -15px;
+        }
+    }
 }
