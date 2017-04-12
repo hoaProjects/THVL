@@ -126,6 +126,9 @@
     .commentBlock .box-input textarea{
         width: 96%;
     }
+    .LiveSchedule .scroll-list .col.content {
+        width: 72%;
+    }
     .infoBlock {
         .col{
             width: 100%;
@@ -143,6 +146,14 @@
             .item{
                 margin: 5px;
             }
+        }
+    }
+    .LiveHome.All .listSlider {
+        .slick-next{
+            right: -15px;
+        }
+        .slick-prev{
+            left: -10px;
         }
     }
 }

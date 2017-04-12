@@ -61,4 +61,14 @@
     .commentBlock .box-input textarea{
         width: 96%;
     }
+    .LiveSchedule .scroll-list .col.content {
+        width: 80%;
+    }
+    .controls{
+         #progress {
+             span{
+                 top: -5px;
+             }
+         }
+    }
 }
