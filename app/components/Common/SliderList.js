@@ -13,7 +13,12 @@ export default class categoryList extends React.Component {
         };
     }
     handleMouseEnter(event) {
-        event.currentTarget.parentElement.parentElement.style.overflow = 'visible';
+        if (document.getElementsByTagName('body')[0].clientWidth <=640){
+            event.currentTarget.parentElement.parentElement.style.paddingTop = "15px";
+            event.currentTarget.parentElement.parentElement.style.paddingBottom = "17px";
+        }else{
+            event.currentTarget.parentElement.parentElement.style.overflow = 'visible';
+        }
     }
     handleMouseLeave(event) {
         document.getElementsByTagName('body')[0].removeAttribute('style');
