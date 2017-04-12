@@ -5,7 +5,7 @@ export default class PopupAccount extends React.Component {
     constructor() {
         super();
         this.state={
-
+            
         }
     }
     render() {
