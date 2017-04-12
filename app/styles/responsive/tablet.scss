@@ -1,4 +1,4 @@
-@media only screen and (min-width: 641px) and (max-width: 1024px) {
+@media only screen and (min-width: 641px) and (max-width: 992px) {
     .controls {
         .time{
             width: 14%;
@@ -42,6 +42,9 @@
                 margin: 5px;
             }
         }
+    }
+    .list-video{
+        padding: 30px 5%;
     }
     .LiveSchedule, .LiveHome .innerVideoLive .VideoPlay{
         width: 100%;
