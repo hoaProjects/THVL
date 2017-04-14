@@ -1,14 +1,27 @@
+	.slick-slider{
+		z-index: 100;
+	}
 	.videoDetailPopup {
-		position: fixed;
+		position: relative;
 		left: 0;
-		bottom: 15px;
+		bottom: 4px;
 		width: 100%;
 		background: url(/app/assets/img/video.png) transparent right center no-repeat;
 		min-height: 400px;
 		@include animate(0.3s);
-		visibility: hidden;
-		opacity: 0;
-		z-index: 1000;
+		display: none;
+		z-index: 1;
+		.arrowDown{
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #376bfb;
+            position: absolute;
+            top: -1px;
+            left: 0;
+        }
 		&:after{
 			content: "";
 			background: url(/app/assets/img/bg-gradient.png) transparent top center no-repeat;
@@ -20,8 +33,7 @@
 			background-size: cover;
 		}
 		&.m-fadeIn {
-	        visibility: visible;
-	        opacity: 1;
+	        display: block;
 	        transition: visibility 0s linear 0s, opacity 300ms;
 	    }
 		.infoBlock {
@@ -64,5 +76,14 @@
 				width: 100%;
 				text-align: left;
 			}
+		}
+		a.close{
+			color: #fff;
+			font-family: 'Roboto', sans-serif;
+			font-weight: bold;
+			font-size: 24px;
+			position: absolute;
+			right: 20px;
+			top: 20px;
 		}
 	}

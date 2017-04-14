@@ -19,13 +19,20 @@ export default class categoryList extends React.Component {
         }else{
             event.currentTarget.parentElement.parentElement.style.overflow = 'visible';
         }
+        if (!event.currentTarget.classList.contains("activeItem")){
+            document.getElementById("infoVideoPopup").style.marginTop = "-36px";
+        }
     }
     handleMouseLeave(event) {
         document.getElementsByTagName('body')[0].removeAttribute('style');
         event.currentTarget.parentElement.parentElement.removeAttribute('style');
+        document.getElementById("infoVideoPopup").style.marginTop = "0";
     }
     componentDidMount() {
-
+        window.addEventListener("resize", function(){
+            var eleRec = document.getElementsByClassName("activeItem")[0].getBoundingClientRect();
+            document.getElementById('arrVideoDetail').style.left = eleRec.left + document.getElementsByClassName("activeItem")[0].clientWidth/2 + "px";
+        });
     }
     componentWillUnmount() {
 
@@ -33,10 +40,27 @@ export default class categoryList extends React.Component {
     handleClick (e) {
 
     }
-    popupShow=()=>{
+    popupShow=(event)=>{
         var element = document.getElementById("infoVideoPopup");
+        var parent = document.getElementsByClassName("slick-track");
+        event.currentTarget.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.appendChild(element);
         element.className += " m-fadeIn";
+        var itemList = document.querySelectorAll('article.slick-slide');
+        for (var i = 0; i < itemList.length; i++){
+            itemList[i].classList.remove("activeItem");
+        }
+        event.currentTarget.parentElement.parentElement.className+=" activeItem";
+        //Description
+        var description = event.currentTarget.parentElement.childNodes[3];
+        var title = description.getElementsByTagName('h6')[0].innerHTML;
+        //Info box
+        document.getElementById('infoTitle').innerHTML = title;
+
+        // Position of arrow
+        var eleRec = event.currentTarget.parentElement.getBoundingClientRect();
+        document.getElementById('arrVideoDetail').style.left = eleRec.left + event.currentTarget.parentElement.parentElement.clientWidth/2 + "px";
     }
+
     render() {
         function PrevButton({ onClick }) {
             return <a onClick={onClick} className="slick-arrow slick-prev"><span></span></a>;
@@ -77,7 +101,7 @@ export default class categoryList extends React.Component {
 
                     {this.state.category.map((category, i) => (
                         <article key={i} className="item" onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} onTouchEnd={this.onMouseLeave}>
-                            <a href="#">
+                            <a>
                                 <img src={category.src} />
                                 <div className="line"></div>
                                 <div className="iconPlay"></div>

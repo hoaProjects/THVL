@@ -19,6 +19,14 @@ export default class PopupVideo extends React.Component {
    componentWillUnmount() {
 
    }
+   closePopup=()=>{
+       var element = document.getElementById("infoVideoPopup");
+       element.classList.remove("m-fadeIn");
+       var itemList = document.querySelectorAll('article.slick-slide');
+       for (var i = 0; i < itemList.length; i++){
+           itemList[i].classList.remove("activeItem");
+       }
+   }
    popupHide=()=>{
        var element = document.getElementById("infoVideoPopup");
        var element1 = document.getElementById("TrailerPopup");
@@ -28,6 +36,8 @@ export default class PopupVideo extends React.Component {
     render() {
         return (
             <section className="videoDetailPopup" id="infoVideoPopup" ref="container">
+                <span id="arrVideoDetail" className="arrowDown"></span>
+                <a href="#" className="close" onClick={this.closePopup.bind(this)}>X</a>
                 <Info />
                 <div className="iconPlay"></div>
                 <div className="trailerButton" onClick={this.popupHide.bind(this)}><span>Xem Trailer</span></div>

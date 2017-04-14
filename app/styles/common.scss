@@ -143,7 +143,7 @@
 }
 /*===========================================*/
 .item {
-
+    border: 2px solid transparent;
     margin: 3px;
     display: inline-block;
     overflow: visible;
@@ -155,7 +155,18 @@
     -moz-transform: scale(1);
     transition: all 200ms ease-out;
     transform: scale(1);
-
+    &.activeItem {
+        -webkit-transform: scale(1)!important;
+        -ms-transform: scale(1)!important;
+        -moz-transform: scale(1)!important;
+        transform: scale(1)!important;
+        border-color: #376bfb;
+        &:hover{
+            .text, .arrowShow{
+                display: none;
+            }
+        }
+    }
     &.itemLive {
         a {
             border-top-left-radius: 5px;

@@ -23,6 +23,9 @@ body{
 .clear{clear: both;}
 a{
     text-decoration: none;
+    &.mobileButton{
+        display: none;
+    }
 }
 
 .container {
