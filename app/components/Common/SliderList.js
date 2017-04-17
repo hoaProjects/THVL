@@ -30,8 +30,10 @@ export default class categoryList extends React.Component {
     }
     componentDidMount() {
         window.addEventListener("resize", function(){
-            var eleRec = document.getElementsByClassName("activeItem")[0].getBoundingClientRect();
-            document.getElementById('arrVideoDetail').style.left = eleRec.left + document.getElementsByClassName("activeItem")[0].clientWidth/2 + "px";
+            if(document.getElementsByClassName("activeItem")[0]){
+                var eleRec = document.getElementsByClassName("activeItem")[0].getBoundingClientRect();
+                document.getElementById('arrVideoDetail').style.left = eleRec.left + document.getElementsByClassName("activeItem")[0].clientWidth/2 + "px";
+            }
         });
     }
     componentWillUnmount() {
