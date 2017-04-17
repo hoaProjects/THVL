@@ -4,6 +4,15 @@ header {
     top: 0;
     z-index: 1000;
 }
+.mainNavigation {
+    &.fixed {
+        position: fixed;
+        top: 60px;
+        width: 100%;
+        background: #262626;
+        z-index: 1000;
+    }
+}
 .main-nav{
     padding-top: 86px;
     border-bottom: 2px solid #333;

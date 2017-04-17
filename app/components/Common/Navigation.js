@@ -15,6 +15,23 @@ export class Navigation extends React.Component {
         var css = (this.state.showHideMobileButton === "hidden") ? "show" : "hidden";
         this.setState({"showHideMobileButton":css});
     }
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll);
+    }
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+    handleScroll= (event) => {
+        var ele = document.getElementsByClassName("slickSlider")[0].clientHeight;
+        let scrollTop = event.srcElement.body.scrollTop;
+        if (scrollTop > ele - 60){
+            console.log('added');
+            document.getElementsByClassName("mainNavigation")[0].classList.add("fixed");
+        }else{
+            console.log('remove');
+            document.getElementsByClassName("mainNavigation")[0].classList.remove("fixed");
+        }
+    }
     render(){
         return (
             <nav className="main-nav">
