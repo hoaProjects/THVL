@@ -22,14 +22,14 @@ export class Navigation extends React.Component {
         window.removeEventListener('scroll', this.handleScroll);
     }
     handleScroll= (event) => {
-        var ele = document.getElementsByClassName("slickSlider")[0].clientHeight;
-        let scrollTop = event.srcElement.body.scrollTop;
-        if (scrollTop > ele - 60){
-            console.log('added');
-            document.getElementsByClassName("mainNavigation")[0].classList.add("fixed");
-        }else{
-            console.log('remove');
-            document.getElementsByClassName("mainNavigation")[0].classList.remove("fixed");
+        if(document.getElementsByClassName("slickSlider")){
+            var ele = document.getElementsByClassName("slickSlider")[0].clientHeight;
+            let scrollTop = event.srcElement.body.scrollTop;
+            if (scrollTop > ele - 60){
+                document.getElementsByClassName("mainNavigation")[0].classList.add("fixed");
+            }else{
+                document.getElementsByClassName("mainNavigation")[0].classList.remove("fixed");
+            }
         }
     }
     render(){
