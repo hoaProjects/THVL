@@ -24,6 +24,8 @@ export default class SlickSlider extends React.Component {
             speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
+            fade: true,
+            draggable: false,
             prevArrow: <PrevButton />,
             nextArrow: <NextButton />
         };

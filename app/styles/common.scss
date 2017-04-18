@@ -127,7 +127,7 @@
 }
 /*===========================================*/
 .iconPlay {
-    background: url("/app/assets/img/icon/play_icon.png") transparent  right center no-repeat;
+    background: url("/app/assets/img/icon/white_play_icon.png") transparent  right center no-repeat;
     width: 80px;
     height: 80px;
     position: absolute;
@@ -140,8 +140,26 @@
     -ms-transition: all 200ms ease-out;
     -moz-transition: all 200ms ease-out;
     transition: all 200ms ease-out;
+    &:hover{
+        background: url("/app/assets/img/icon/play_icon.png") transparent  right center no-repeat;
+        cursor: pointer;
+    }
 }
 /*===========================================*/
+.slick-slider.activeBorder{
+    .item{
+        -webkit-transform: scale(1)!important;
+        -ms-transform: scale(1)!important;
+        -moz-transform: scale(1)!important;
+        transform: scale(1)!important;
+        &:hover{
+            border-color: #376bfb;
+            .text, .arrowShow{
+                display: none;
+            }
+        }
+    }
+}
 .item {
     border: 2px solid transparent;
     margin: 3px;

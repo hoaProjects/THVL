@@ -23,6 +23,8 @@ export default class PopupVideo extends React.Component {
        var element = document.getElementById("infoVideoPopup");
        element.classList.remove("m-fadeIn");
        var itemList = document.querySelectorAll('article.slick-slide');
+       var activeborder = document.getElementsByClassName("activeBorder");
+       activeborder[0].classList.remove("activeBorder");
        for (var i = 0; i < itemList.length; i++){
            itemList[i].classList.remove("activeItem");
        }

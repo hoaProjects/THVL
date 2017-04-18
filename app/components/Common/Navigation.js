@@ -26,8 +26,10 @@ export class Navigation extends React.Component {
             var ele = document.getElementsByClassName("slickSlider")[0].clientHeight;
             let scrollTop = event.srcElement.body.scrollTop;
             if (scrollTop > ele - 60){
+                document.getElementsByTagName("header")[0].classList.add("solid");
                 document.getElementsByClassName("mainNavigation")[0].classList.add("fixed");
             }else{
+                document.getElementsByTagName("header")[0].classList.remove("solid");
                 document.getElementsByClassName("mainNavigation")[0].classList.remove("fixed");
             }
         }

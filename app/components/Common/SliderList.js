@@ -19,14 +19,10 @@ export default class categoryList extends React.Component {
         }else{
             event.currentTarget.parentElement.parentElement.style.overflow = 'visible';
         }
-        if (!event.currentTarget.classList.contains("activeItem")){
-            document.getElementById("infoVideoPopup").style.marginTop = "-36px";
-        }
     }
     handleMouseLeave(event) {
         document.getElementsByTagName('body')[0].removeAttribute('style');
         event.currentTarget.parentElement.parentElement.removeAttribute('style');
-        document.getElementById("infoVideoPopup").style.marginTop = "0";
     }
     componentDidMount() {
         window.addEventListener("resize", function(){
@@ -52,6 +48,7 @@ export default class categoryList extends React.Component {
             itemList[i].classList.remove("activeItem");
         }
         event.currentTarget.parentElement.parentElement.className+=" activeItem";
+        event.currentTarget.parentElement.parentElement.parentElement.parentElement.parentElement.className+=" activeBorder";
         //Description
         var description = event.currentTarget.parentElement.childNodes[3];
         var title = description.getElementsByTagName('h6')[0].innerHTML;

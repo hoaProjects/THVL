@@ -3,6 +3,13 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
+    &.solid{
+        .wrap{
+            &:after{
+                opacity: 1;
+            }
+        }
+    }
 }
 .mainNavigation {
     &.fixed {
