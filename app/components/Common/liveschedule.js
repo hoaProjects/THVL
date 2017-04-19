@@ -13,7 +13,10 @@ export class LiveSchedule extends React.Component {
     handleScroll(scrollData){
       console.log(scrollData);
     }
-
+    popupShowDatepicker=()=>{
+        var element = document.getElementById("datePickerPopup");
+        element.className += " m-fadeIn";
+    }
     render() {
         var itemElements = [];
         for( var i = 0; i< this.state.itemsCount; i++){
@@ -41,7 +44,7 @@ export class LiveSchedule extends React.Component {
             <section className="LiveSchedule">
                 <article className="head">
                     <h3 className="title">LỊCH PHÁT SÓNG</h3>
-                    <a href="/listcategory" className="viewall">Hôm nay</a>
+                    <a href="#" onClick={this.popupShowDatepicker.bind(this)} className="viewall">Hôm nay</a>
                 </article>
                 <article className="scroll-list">
                     <ScrollArea
