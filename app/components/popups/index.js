@@ -3,6 +3,7 @@ import PopupAccount from '../../components/popups/account/index';
 import PopupLogin from '../../components/popups/Login/index';
 import DetailVideo from '../../components/popups/VideoDetail/index';
 import TrailerVideo from '../../components/popups/trailer/index';
+import PopupDatePicker from '../../components/popups/datepicker/index';
 
 const PopupControl = () =>
     <div>
@@ -10,5 +11,6 @@ const PopupControl = () =>
         <PopupLogin />
         <DetailVideo />
         <TrailerVideo />
+        <PopupDatePicker />
     </div>
 export default PopupControl;
