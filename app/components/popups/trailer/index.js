@@ -11,7 +11,12 @@ export default class Trailer extends React.Component {
     }
     popupHide=()=>{
         var element = document.getElementById("TrailerPopup");
+        var activeborder = document.getElementsByClassName("activeBorder");
+        activeborder[0].classList.remove("activeBorder");
         element.classList.remove("m-fadeIn");
+        for (var i = 0; i < itemList.length; i++){
+            itemList[i].classList.remove("activeItem");
+        }
     }
     render() {
 

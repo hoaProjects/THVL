@@ -103,7 +103,7 @@ export default class categoryList extends React.Component {
                             <a>
                                 <img src={category.src} />
                                 <div className="line"></div>
-                                <div className="iconPlay"></div>
+                                <div className="iconPlay" onClick={this.popupShow.bind(this)}></div>
                                 <div className="description">
                                     <h6>{category.name}</h6>
                                     <p className="text">Cuộc thi tìm kiếm tài năng hài kịch...</p>

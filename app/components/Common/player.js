@@ -36,6 +36,7 @@ export class VideoPlay extends React.Component {
     render() {
         return (
             <section className="VideoPlay">
+                <div className="advertisement"></div>
                 <figure id="videoContainer" data-fullscreen="false">
                     <video id="video" preload="metadata">
             			<source src="http://iandevlin.github.io/mdn/video-player/video/tears-of-steel-battle-clip-medium.mp4" type="video/mp4" />
@@ -85,9 +86,10 @@ export class VideoPlay extends React.Component {
                         <section className="fs">
                             <button id="fs" type="button" data-state="go-fullscreen">Fullscreen</button>
                         </section>
-
             		</div>
             	</figure>
+                <div className="advertisement adver02"></div>
+                <div className="clear"></div>
             </section>
         );
     }

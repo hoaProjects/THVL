@@ -93,12 +93,12 @@ video {
 	}
 	.progress {
 		cursor:pointer;
-		width:61%;
+		width:59%;
 		margin-right: 1.195313%;
 	}
 	.time {
 		font-size: 18px;
-    	width: 8%;
+    	width: 9%;
     	line-height: 27px;
     	margin-left: 0.1953125%;
 		color: #fff;
@@ -185,6 +185,28 @@ video {
 			background: #fff;
 			top: -12px;
 		}
+	}
+}
+
+.VideoDetail{
+	.advertisement{
+		width: 10%;
+		display: inline-block;
+		vertical-align: top;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background: #ccc;
+		height: 100%;
+		&.adver02{
+			right: 0;
+			left: auto;
+		}
+	}
+	#videoContainer{
+		display: table;
+		width: 80%;
+		margin: 0 auto;
 	}
 }
 
