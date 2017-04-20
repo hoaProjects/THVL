@@ -35,12 +35,17 @@ export default class PopupDatePicker extends React.Component {
         return (
             <section className="Popup-Account" id="datePickerPopup">
                 <div className="bg_overlay" onClick={this.popupHide.bind(this)}></div>
-                <DayPicker
-                    enableOutsideDays
-                    initialMonth={ new Date(2017, 1) }
-                    selectedDays={ this.state.selectedDay }
-                    onDayClick={ this.handleDayClick }
-                />
+                <div className="contentDate">
+
+                    <DayPicker
+                        enableOutsideDays
+                        initialMonth={ new Date(2017, 1) }
+                        selectedDays={ this.state.selectedDay }
+                        onDayClick={ this.handleDayClick }
+                    />
+                    <div className="btn_close" onClick={this.popupHide.bind(this)}><img src="/app/assets/img/icon/btn_close.png"/></div>
+                </div>
+
             </section>
         );
     }
