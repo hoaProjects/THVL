@@ -1,4 +1,15 @@
-
+.LiveHome.All {
+	.itemAllLive {
+		display: none;
+	}
+	.listSlider .slick-slider {
+		width: auto;
+		float: none;
+	}
+	.listSlider {
+		width: auto;
+	}
+}
 .LiveSchedule {
 	width: 23%;
 	background-color: #0d0d0d;
@@ -26,7 +37,7 @@
 		.row {
 			clear: both;
 			overflow: hidden;
-			padding: 15px;
+			padding: 12px;
 			border-bottom: 1px #262626 solid;
 			cursor: pointer;
 			&:hover {
@@ -36,7 +47,7 @@
 		.col {
 			float: left;
 			.thumb {
-				padding-right: 15px;
+				padding-right: 12px;
 				width: 120px;
 				img {
 					width: 100%;

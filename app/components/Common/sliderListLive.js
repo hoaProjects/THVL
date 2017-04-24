@@ -7,12 +7,13 @@ export default class SliderListLive extends React.Component {
     }
 
     render() {
+        let numberSlider=5;
         const settings = {
           dots: false,
           infinite: true,
           speed: 500,
-          slidesToShow: 5,
-          slidesToScroll: 5,
+          slidesToShow: this.props.number,
+          slidesToScroll: this.props.number,
           responsive: [
               {
                 breakpoint: 1024,
@@ -32,6 +33,7 @@ export default class SliderListLive extends React.Component {
         };
         return (
             <section className="listSlider">
+                <div className="itemAllLive"><img src="../app/assets/img/live/allLive.jpg" /></div>
                 <BlockSlider {...settings}>
                     {this.props.data.map((slider, i) => (<div key={i}><img src={slider.src} /></div>))}
                 </BlockSlider>

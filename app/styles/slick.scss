@@ -20,6 +20,7 @@
     display: block;
     margin: 0;
     padding: 0;
+    margin: 0 -6px;
 
     &:focus {
         outline: none;
@@ -63,6 +64,7 @@
     float: left;
     height: 100%;
     min-height: 1px;
+    margin: 0 6px;
     [dir="rtl"] & {
         float: right;
     }

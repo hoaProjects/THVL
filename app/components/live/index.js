@@ -22,7 +22,8 @@ export default class LiveHome extends React.Component {
                 { 'src': '../app/assets/img/live/live-tv03.jpg'},
                 { 'src': '../app/assets/img/live/live-tv04.jpg'},
                 { 'src': '../app/assets/img/live/allLive.jpg'}
-            ]
+            ],
+            number: 4
         }
     }
     render() {
@@ -33,7 +34,8 @@ export default class LiveHome extends React.Component {
                     <VideoPlay  />
                     <Liveschedule />
                 </div>
-                <SliderListLive data={this.state.data} />
+                
+                <SliderListLive number={this.state.number} data={this.state.data} />
                 <Comments />
             </section>
         );

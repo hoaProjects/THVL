@@ -270,14 +270,14 @@ $primary: #1976d2;
                     cursor: pointer;
                     margin: 10px 0;
                     border-radius: 4px;
-                    background-color: #3b5997;
+                    background-color: #3366ff;
                     color: #fff;
-                    text-align: left;
+                    text-align: center;
                     position: relative;
                     &::before {
                         content: '';
                         display: block;
-                        background: url(/app/assets/img/icon/i-facebook.png) transparent left center no-repeat;
+
                         width: 12px;
                         background-size: 12px auto;
                         height: 26px;
@@ -286,6 +286,8 @@ $primary: #1976d2;
                         top: 6px;
                     }
                     &.facebook {
+                        background-color: #3b5997;
+                        text-align: left;
                         &::before {
                             background: url(/app/assets/img/icon/i-facebook.png) transparent left center no-repeat;
                             background-size: 12px auto;
@@ -294,6 +296,7 @@ $primary: #1976d2;
                     &.email {
                         background-color: #de4d32;
                         padding-left: 50px;
+                        text-align: left;
                         &::before {
                             background: url(/app/assets/img/icon/i-email.png) transparent left center no-repeat;
                             background-size: 20px auto;
@@ -302,6 +305,7 @@ $primary: #1976d2;
                     }
                     &.phone {
                         background-color: #3366ff;
+                        text-align: left;
                         &::before {
                             background: url(/app/assets/img/icon/i-phone.png) transparent left center no-repeat;
                             background-size: 12px auto;

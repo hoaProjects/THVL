@@ -72,7 +72,8 @@ export default class LiveAll extends React.Component {
                 { 'src': '../app/assets/img/live/HTV-4.png'},
                 { 'src': '../app/assets/img/live/HTV-7.png'},
                 { 'src': '../app/assets/img/live/HTV-2.png'},
-            ]
+            ],
+            number: 5
         };
     }
     render() {
@@ -80,13 +81,13 @@ export default class LiveAll extends React.Component {
         return (
             <section className="LiveHome All">
                 <TitleSlider title="Kênh THVL" />
-                <SliderListLive cls="item itemLive"  data={this.state.data1} />
+                <SliderListLive number={this.state.number} cls="item itemLive"  data={this.state.data1} />
                 <TitleSlider title="KÊNH HTV" />
-                <SliderListLive cls="item itemLive" data={this.state.data2} />
+                <SliderListLive number={this.state.number}  cls="item itemLive" data={this.state.data2} />
                 <TitleSlider title="VTV" />
-                <SliderListLive  cls="item itemLive" data={this.state.data3} />
+                <SliderListLive number={this.state.number}  cls="item itemLive" data={this.state.data3} />
                 <TitleSlider title="KÊNH NƯỚC NGOÀI" />
-                <SliderListLive  cls="item itemLive" data={this.state.data4} />
+                <SliderListLive number={this.state.number}  cls="item itemLive" data={this.state.data4} />
             </section>
         );
     }

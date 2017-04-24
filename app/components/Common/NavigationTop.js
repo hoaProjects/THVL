@@ -17,7 +17,7 @@ export class NavigationTop extends React.Component {
         element.className += " m-fadeIn";
     }
     popupShowLogin=()=>{
-        var element = document.getElementById("LoginPopup");
+        var element = document.getElementById("SignupPopup");
         element.className += " m-fadeIn";
     }
     render() {
