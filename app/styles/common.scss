@@ -42,7 +42,8 @@
 .LiveHome {
 
     .innerVideoLive {
-        width: 100%;
+        width: 94%;
+        padding: 0 3%;
         display: table;
         .row-clear {
             display: table-row;
@@ -371,7 +372,10 @@
 /*====================Video Detail=======================*/
 .VideoDetail, .LiveHome {
     clear: both;
-    padding: 3%;
+    padding: 3% 0;
+    .main-nav.video {
+        padding: 0 3%;
+    }
     .VideoPlay {
         position: relative;
         clear: both;
@@ -440,11 +444,12 @@
         }
     }
 }
+
 /*======================================================*/
 .commentBlock {
     clear: both;
     color: #ccc;
-    padding: 40px 0;
+    padding: 40px 3%;
     .box-input {
         background-color: #4d4d4d;
         border-radius: 5px;
