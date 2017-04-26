@@ -10,7 +10,7 @@ export default class SliderListLive extends React.Component {
         let numberSlider=5;
         const settings = {
           dots: false,
-          infinite: true,
+          infinite: false,
           speed: 500,
           slidesToShow: this.props.number,
           slidesToScroll: this.props.number,

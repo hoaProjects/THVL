@@ -185,6 +185,14 @@
         -ms-transform: scale(1)!important;
         -moz-transform: scale(1)!important;
         transform: scale(1)!important;
+        .description {
+            display: none;
+        }
+        &.activeItem {
+            .line {
+                display: none;
+            }
+        }
         &:hover{
 
             a {
