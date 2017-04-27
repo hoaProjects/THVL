@@ -66,7 +66,7 @@ export default class categoryList extends React.Component {
 
     render() {
         function PrevButton({ onClick }) {
-            return <a onClick={onClick} id="slick-prev" className="slick-arrow slick-prev disable"><span></span></a>;
+            return <a onClick={onClick} id="slick-prev" className="slick-arrow slick-prev"><span></span></a>;
         }
         function NextButton({ onClick }) {
             return <a onClick={onClick} id="slick-next" className="slick-arrow slick-next"><span></span></a>;
@@ -81,24 +81,24 @@ export default class categoryList extends React.Component {
 			  prevArrow: <PrevButton />,
               nextArrow: <NextButton />,
 			  initialSlide: this.state.currentSlide,
-		      afterChange: function(index) {
+		      afterChange: function(key,index) {
 
 					this.setState({ currentSlide: index });
 					let pre = document.getElementById("slick-prev");
 					let next = document.getElementById("slick-next");
-					if(this.state.currentSlide==0) {
-						pre.className+=" disable";
-						next.classList.remove("disable");
-					}
-					else if(this.state.currentSlide==dataItem.length-1){
-						next.className+=" disable";
-						pre.classList.remove("disable");
-					}
-					else {
-						pre.classList.remove("disable");
-						next.classList.remove("disable");
-					}
-					console.log(index)
+					// if(this.state.currentSlide==0) {
+					// 	pre.className+=" disable";
+					// 	next.classList.remove("disable");
+					// }
+					// else if(this.state.currentSlide==dataItem.length-1){
+					// 	next.className+=" disable";
+					// 	pre.classList.remove("disable");
+					// }
+					// else {
+					// 	pre.classList.remove("disable");
+					// 	next.classList.remove("disable");
+					// }
+					console.log(key)
 					console.log(dataItem.length);
 			  }.bind(this),
 			  responsive: [
