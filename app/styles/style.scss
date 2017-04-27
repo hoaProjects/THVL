@@ -60,9 +60,15 @@ a{
         }
         &.slick-prev{
             left: 10px;
+			&.disable {
+				display: none;
+			}
         }
         &.slick-next{
             right: 10px;
+			&.disable {
+				display: none;
+			}
             span{
                 background-position: right center;
             }

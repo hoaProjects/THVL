@@ -125,6 +125,9 @@
             right: -50px;
             top: 50%;
             margin-top: -20px;
+			&.disable {
+				display: none;
+			}
         }
         .slick-prev {
             background: url(/app/assets/img/arrow.png) transparent left center no-repeat;
@@ -137,6 +140,9 @@
             left: -248px;
             top: 50%;
             margin-top: -20px;
+			&.disable {
+				display: none;
+			}
         }
     }
     &.All {

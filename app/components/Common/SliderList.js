@@ -9,7 +9,10 @@ export default class categoryList extends React.Component {
         this.onMouseEnter  = this.handleMouseEnter.bind(this);
         this.onMouseLeave  = this.handleMouseLeave.bind(this);
         this.state = {
-            category: dataItem
+            category: dataItem,
+			disablePrev: "",
+			disableNext: "",
+			currentSlide:0
         };
     }
     handleMouseEnter(event) {
@@ -20,6 +23,7 @@ export default class categoryList extends React.Component {
             event.currentTarget.parentElement.parentElement.style.overflow = 'visible';
         }
     }
+
     handleMouseLeave(event) {
         document.getElementsByTagName('body')[0].removeAttribute('style');
         event.currentTarget.parentElement.parentElement.removeAttribute('style');
@@ -62,60 +66,81 @@ export default class categoryList extends React.Component {
 
     render() {
         function PrevButton({ onClick }) {
-            return <a onClick={onClick} className="slick-arrow slick-prev"><span></span></a>;
+            return <a onClick={onClick} id="slick-prev" className="slick-arrow slick-prev disable"><span></span></a>;
         }
         function NextButton({ onClick }) {
-            return <a onClick={onClick} className="slick-arrow slick-next"><span></span></a>;
+            return <a onClick={onClick} id="slick-next" className="slick-arrow slick-next"><span></span></a>;
         }
-        const blocksettings = {
-            dots: false,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 5,
-            slidesToScroll: 5,
-            centerMode: true,
-            centerPadding: '3px',
-            prevArrow: <PrevButton />,
-            nextArrow: <NextButton />,
-            responsive: [
-                {
-                  breakpoint: 1024,
-                  settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3
-                  }
-                },
-                {
-                  breakpoint: 641,
-                  settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                  }
-                }
-              ]
-        };
-        return (
-            <div className="sliderBlock">
-                <BlockSlider {...blocksettings}>
 
-                    {this.state.category.map((category, i) => (
-                        <article key={i} className="item" onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} onTouchEnd={this.onMouseLeave}>
-                            <a>
-                                <img src={category.src} />
-                                <div className="line"></div>
-                                <div className="iconPlay" onClick={this.popupShow.bind(this)}></div>
-                                <div className="description">
-                                    <h6>{category.name}</h6>
-                                    <p className="text">Cuộc thi tìm kiếm tài năng hài kịch...</p>
-                                    <div className="play">{category.view} Lượt xem</div>
-                                    <div className="heart">{category.like} Yêu thích</div>
-                                </div>
-                                <div className="arrowShow" onClick={this.popupShow.bind(this)}></div>
-                            </a>
-                        </article>
-                    ))}
-                </BlockSlider>
-            </div>
+		const settings = {
+		      dots: false,
+		      infinite: false,
+		      speed: 500,
+		      slidesToScroll: 5,
+		      slidesToShow: 5,
+			  prevArrow: <PrevButton />,
+              nextArrow: <NextButton />,
+			  initialSlide: this.state.currentSlide,
+		      afterChange: function(index) {
+
+					this.setState({ currentSlide: index });
+					let pre = document.getElementById("slick-prev");
+					let next = document.getElementById("slick-next");
+					if(this.state.currentSlide==0) {
+						pre.className+=" disable";
+						next.classList.remove("disable");
+					}
+					else if(this.state.currentSlide==dataItem.length-1){
+						next.className+=" disable";
+						pre.classList.remove("disable");
+					}
+					else {
+						pre.classList.remove("disable");
+						next.classList.remove("disable");
+					}
+					console.log(index)
+					console.log(dataItem.length);
+			  }.bind(this),
+			  responsive: [
+                  {
+                    breakpoint: 1024,
+                    settings: {
+                      slidesToShow: 3,
+                      slidesToScroll: 3
+                    }
+                  },
+                  {
+                    breakpoint: 641,
+                    settings: {
+                      slidesToShow: 2,
+                      slidesToScroll: 2
+                    }
+                  }
+                ]
+    	};
+        return (
+			<div className="sliderBlock">
+		        <BlockSlider {...settings}>
+				{this.state.category.map((category, i) => (
+
+					<article key={i} className="item" onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} onTouchEnd={this.onMouseLeave}>
+		                <a>
+		                    <img src={category.src} />
+		                    <div className="line"></div>
+		                    <div className="iconPlay" onClick={this.popupShow.bind(this)}></div>
+		                    <div className="description">
+		                        <h6>{category.name}</h6>
+		                        <p className="text">Cuộc thi tìm kiếm tài năng hài kịch...</p>
+		                        <div className="play">{category.view} Lượt xem</div>
+		                        <div className="heart">{category.like} Yêu thích</div>
+		                    </div>
+		                    <div className="arrowShow" onClick={this.popupShow.bind(this)}></div>
+		                </a>
+		            </article>
+
+			  	))}
+		        </BlockSlider>
+		  	</div>
         );
     }
 }
