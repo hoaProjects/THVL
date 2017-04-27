@@ -6,12 +6,46 @@
     .slick-slide {
         margin: 0 0;
     }
+    .slick-prev:after {
+        display: none;
+    }
+    ul.slickSlider {
+        .slick-next:after {
+            display: none;
+        }
+    }
+
 }
-.sliderBlock {
-    .slick-slider {
-        padding-left: 39px;
+section.home {
+    .sliderBlock {
+        .slick-slider {
+            padding-left: 39px;
+        }
+        .slick-next {
+            top: 0;
+            margin-top: 0;
+            height: 100%;
+            width: 32px;
+            background: url(/app/assets/img/arrow.png) transparent right 12px center no-repeat;
+            right: 0;
+            &.slick-disabled {
+                display: none !important;
+            }
+        }
+        .slick-prev {
+            top: 0;
+            margin-top: 0;
+            height: 100%;
+            width: 32px;
+            background: url(/app/assets/img/arrow.png) transparent left 12px center no-repeat;
+            right: 0;
+            &.slick-disabled {
+                display: none !important;
+            }
+        }
     }
 }
+
 .slick-slider {
     position: relative;
     display: block;
@@ -111,4 +145,50 @@
 }
 .slick-arrow.slick-hidden {
     display: none;
+}
+.slick-next {
+    background: url(/app/assets/img/arrow.png) transparent right center no-repeat;
+    text-indent:-99999px;
+    border: none;
+    outline: none;
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    margin-top: -20px;
+    &:after {
+        content: "";
+        background: #000;
+        opacity: 0.7;
+        position: absolute;
+        width: 45px;
+        height: 95%;
+        right: 0;
+        top: 6px;
+        z-index: 1;
+    }
+}
+.slick-prev {
+    background: url(/app/assets/img/arrow.png) transparent left center no-repeat;
+    text-indent:-99999px;
+    border: none;
+    outline: none;
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 0;
+    &:before {
+        content: "";
+        background: #000;
+        opacity: 0.7;
+        position: absolute;
+        width: 45px;
+        height: 95%;
+        left: 0;
+        top: 6px;
+        z-index: 1;
+    }
 }

@@ -115,36 +115,7 @@
             }
 
         }
-        .slick-next {
-            background: url(/app/assets/img/arrow.png) transparent right center no-repeat;
-            text-indent:-99999px;
-            border: none;
-            outline: none;
-            width: 20px;
-            height: 30px;
-            position: absolute;
-            right: -50px;
-            top: 50%;
-            margin-top: -20px;
-			&.disable {
-				display: none;
-			}
-        }
-        .slick-prev {
-            background: url(/app/assets/img/arrow.png) transparent left center no-repeat;
-            text-indent:-99999px;
-            border: none;
-            outline: none;
-            width: 20px;
-            height: 30px;
-            position: absolute;
-            left: -248px;
-            top: 50%;
-            margin-top: -20px;
-			&.disable {
-				display: none;
-			}
-        }
+        
     }
     &.All {
         .listSlider  {
@@ -153,16 +124,17 @@
             margin: 0;
 
             .slick-slider {
-                &:before {
-                    content: "";
-                    background: #000;
-                    opacity: 0.7;
-                    position: absolute;
-                    width: 45px;
-                    height: 99%;
-                    left: 0;
-                    top: 0;
-                }
+
+
+            }
+            .slick-next {
+                right: 0;
+                height: 100%;
+                width: 30px;
+                top:0;
+                top: 0;
+                margin-top: 0;
+                background: url(/app/assets/img/arrow.png) transparent right 10px center no-repeat;
                 &:after {
                     content: "";
                     background: #000;
@@ -174,14 +146,32 @@
                     top: 0;
                     z-index: 1;
                 }
-            }
-            .slick-next {
-                right: 12px;
+                &.slick-disabled {
+                    display: none !important;
+                }
                 z-index: 2;
             }
             .slick-prev {
-                left: 12px;
+                left: 0;
+                width: 30px;
+                height: 100%;
+                background: url(/app/assets/img/arrow.png) transparent 10px center no-repeat;
+                top: 0;
+                margin-top: 0;
                 z-index: 2;
+                &:after {
+                    content: "";
+                    background: #000;
+                    opacity: 0.7;
+                    position: absolute;
+                    width: 45px;
+                    height: 99%;
+                    left: 0;
+                    top: 0;
+                }
+                &.slick-disabled {
+                    display: none !important;
+                }
             }
         }
         .head {

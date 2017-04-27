@@ -78,8 +78,6 @@ export default class categoryList extends React.Component {
 		      speed: 500,
 		      slidesToScroll: 5,
 		      slidesToShow: 5,
-			  prevArrow: <PrevButton />,
-              nextArrow: <NextButton />,
 			  initialSlide: this.state.currentSlide,
 		      afterChange: function(key,index) {
 
