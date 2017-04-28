@@ -2,6 +2,6 @@ import React from 'react';
 
 const Footer = () =>
   <footer>
-      Bản quyền thuộc về Đài Truyền Hình Vĩnh Long
+      © Copyright 2017 THVLi. All rights reserved
   </footer>;
 export default Footer;
