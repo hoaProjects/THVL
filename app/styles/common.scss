@@ -79,6 +79,10 @@
             width: 800px;
             float: left;
         }
+        .slick-prev {
+            left: -257px;
+            top: 27px;
+        }
         .slick-slide {
             color: #fff;
             position: relative;
@@ -115,7 +119,7 @@
             }
 
         }
-        
+
     }
     &.All {
         .listSlider  {
