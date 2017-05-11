@@ -1,3 +1,17 @@
+@media only screen and (max-width: 1440px) {
+    .list-video .item {
+        width: 268px;
+    }
+    .VideoDetail .advertisement {
+        height: 89%;
+    }
+    body .area {
+        height: 310px;
+    }
+    .LiveSchedule {
+        background-color: #000;
+    }
+}
 @media only screen and (max-width: 767px) {
     body {
         min-width: 640px;
